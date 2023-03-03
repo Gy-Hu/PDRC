@@ -1,5 +1,5 @@
 # PDR_based_SC
-Reproduce of A Supervisory Control Algorithm Based on Property-Directed Reachability
+Reproduce of [A Supervisory Control Algorithm Based on Property-Directed Reachability](https://arxiv.org/pdf/1711.06501.pdf)
 
 * Initialize and download the submodules that you are interested in:
 
