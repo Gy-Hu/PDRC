@@ -27,7 +27,7 @@ This will print some results, including the header "Resources used"; the figure 
 
 5. In order to inspect the synthesised controller, open GHCi again, and run:
 
-```shell
+```
 :l TransitionSystemIO
 TransitionSystemIO.main
 ```
