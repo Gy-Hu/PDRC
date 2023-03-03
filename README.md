@@ -31,6 +31,8 @@ This will write the file phils5_100 to the Examples folder. The problem is parse
 
 >  tip Examples/phils5_100
 
+> ~/coding_env/PDR_based_SC/supermini/build/tip/tip Examples/phils5_1000
+
 This will print some results, including the header "Resources used"; the figure given for "CPU Time" is the one reported in the paper. The command will also write to output.txt.
 
 5. In order to inspect the synthesised controller, open GHCi again, and run:
