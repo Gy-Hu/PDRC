@@ -1,6 +1,11 @@
 # PDR_based_SC
 Reproduce of A Supervisory Control Algorithm Based on Property-Directed Reachability
 
+* Initialize and download the submodules that you are interested in:
+
+> git submodule init <list-of-submodules>
+> git submodule update
+
 Instructions to replicate results from HVC2017 paper "A Supervisory Control Algorithm Based on Property-Directed Reachability"
 
 Written by Jonatan Kilhamn
