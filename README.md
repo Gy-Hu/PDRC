@@ -4,6 +4,7 @@ Reproduce of A Supervisory Control Algorithm Based on Property-Directed Reachabi
 * Initialize and download the submodules that you are interested in:
 
 > git submodule init <list-of-submodules>
+
 > git submodule update
 
 Instructions to replicate results from HVC2017 paper "A Supervisory Control Algorithm Based on Property-Directed Reachability"
