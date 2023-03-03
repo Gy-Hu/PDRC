@@ -1,4 +1,4 @@
-# PDR_based_Supervisory_Control
+# PDR_based_SC
 Reproduce of A Supervisory Control Algorithm Based on Property-Directed Reachability
 
 Instructions to replicate results from HVC2017 paper "A Supervisory Control Algorithm Based on Property-Directed Reachability"
