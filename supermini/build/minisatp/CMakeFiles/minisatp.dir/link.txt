@@ -1,0 +1,1 @@
+/bin/c++  -O3 -g -DNDEBUG -fomit-frame-pointer  -static -rdynamic CMakeFiles/minisatp.dir/Main.cc.o  -o minisatp  libminisatp.a libminisatp.a ../minisat/libminisat.a -lz -lgmp 

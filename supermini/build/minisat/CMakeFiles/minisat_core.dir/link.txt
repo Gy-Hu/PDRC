@@ -1,0 +1,1 @@
+/bin/c++  -O3 -g -DNDEBUG -fomit-frame-pointer  -static -rdynamic CMakeFiles/minisat_core.dir/minisat/core/Main.cc.o  -o minisat_core  libminisat.a -lz 

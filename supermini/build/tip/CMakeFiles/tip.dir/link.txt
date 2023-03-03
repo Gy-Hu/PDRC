@@ -1,0 +1,1 @@
+/bin/c++  -O3 -g -DNDEBUG -fomit-frame-pointer  -static -rdynamic CMakeFiles/tip.dir/tip/Main.cc.o  -o tip  libtip.a ../mcl/libmcl.a ../minisat/libminisat.a -lz 

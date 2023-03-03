@@ -1,0 +1,12 @@
+[submodule "minisatp"]
+	path = minisatp
+	url = git://github.com/JonatanKilhamn/minisatp.git
+[submodule "minisat"]
+	path = minisat
+	url = git://github.com/JonatanKilhamn/minisat.git
+[submodule "mcl"]
+	path = mcl
+	url = git://github.com/JonatanKilhamn/mcl.git
+[submodule "tip"]
+	path = tip
+	url = git://github.com/JonatanKilhamn/tip.git

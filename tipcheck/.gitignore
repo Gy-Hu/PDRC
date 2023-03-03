@@ -1,0 +1,14 @@
+Examples
+*.hi
+*.o
+*~
+scratch.hs
+notes.txt
+output*.txt
+superminiproject/
+.DS_store
+/supermini/build/
+bak/
+supermini.bak/
+supermini/
+Anteckningar/*
