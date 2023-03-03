@@ -27,8 +27,10 @@ This will print some results, including the header "Resources used"; the figure 
 
 5. In order to inspect the synthesised controller, open GHCi again, and run:
 
+```shell
 :l TransitionSystemIO
 TransitionSystemIO.main
+```
 
 However, this depends on modifications in the source file to run the correct file. Inside TransitionSystemIO.main, there are three lines of which two are commented-out:
   s <- philSynch -- EDP
