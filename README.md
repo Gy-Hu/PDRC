@@ -14,8 +14,10 @@ We assume you want to run the PDRC algorithm on one of the Extended Dining Philo
 
 3. Open GHCi and run:
 
+```
 :l PhilosophersParsed.hs
 PhilosophersParsed.main
+```
 
 This will write the file phils5_100 to the Examples folder. The problem is parsed from the file EDP5_100.wmod, which has the problem in the .wmod format.
 
