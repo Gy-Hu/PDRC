@@ -43,9 +43,11 @@ TransitionSystemIO.main
 ```
 
 However, this depends on modifications in the source file to run the correct file. Inside TransitionSystemIO.main, there are three lines of which two are commented-out:
-  s <- philSynch -- EDP
-  -- s <- cmtSynch -- CMT
-  -- s <- pmeSynch -- PME
+
+> s <- philSynch -- EDP  
+> -- s <- cmtSynch -- CMT  
+> -- s <- pmeSynch -- PME
+
 The one corresponding to the problem class of interested should be uncommented. Furthermore, the corresponding file (PhilosophersParsed.hs, CatMouseParsed.hs, PMEParsed.hs, respectively) should be set up exactly the same as it was when its respective "main" function generated the file that was used as input to tip.
 
 The output from TransitionSystemIO.main is in the internal Synchronisation format, which specifies a number of synchronised automata and their shared events and variables. This step takes some time, but this is because PDRC operates on the monolithic circuit version of the synchronised system, and this presentation requires decomposition into each automaton. Compared to the claims in the paper, this is an unnecessary step, which is why we implemented it in the less-efficient Haskell over C++, and why we didn't include it in the runtime measurements.
