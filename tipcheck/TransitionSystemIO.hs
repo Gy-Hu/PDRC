@@ -114,7 +114,7 @@ main = do
 ---- reading the input
 
 outputFile :: FilePath
-outputFile = "../output.txt"
+outputFile = "output.txt"
 
 
 type Invariant = [OutputRef]
