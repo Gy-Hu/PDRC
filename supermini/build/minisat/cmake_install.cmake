@@ -1,4 +1,4 @@
-# Install script for directory: /data/guangyuh/coding_env/supermini/minisat
+# Install script for directory: /data/guangyuh/coding_env/PDR_based_SC/supermini/minisat
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/data/guangyuh/coding_env/supermini/build/minisat/libminisat.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/libminisat.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -54,8 +54,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/data/guangyuh/coding_env/supermini/build/minisat/libminisat.so.2.1.0"
-    "/data/guangyuh/coding_env/supermini/build/minisat/libminisat.so.2"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/libminisat.so.2.1.0"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/libminisat.so.2"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libminisat.so.2.1.0"
@@ -77,7 +77,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libminisat.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/data/guangyuh/coding_env/supermini/build/minisat/libminisat.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/libminisat.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libminisat.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libminisat.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -93,7 +93,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/minisat_core"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/data/guangyuh/coding_env/supermini/build/minisat/minisat_core")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/minisat_core")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/minisat_core" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/minisat_core")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -109,7 +109,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/minisat"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/data/guangyuh/coding_env/supermini/build/minisat/minisat")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/minisat")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/minisat" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/minisat")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -120,10 +120,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/minisat" TYPE DIRECTORY FILES
-    "/data/guangyuh/coding_env/supermini/minisat/minisat/mtl"
-    "/data/guangyuh/coding_env/supermini/minisat/minisat/utils"
-    "/data/guangyuh/coding_env/supermini/minisat/minisat/core"
-    "/data/guangyuh/coding_env/supermini/minisat/minisat/simp"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/mtl"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/utils"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/core"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/simp"
     FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

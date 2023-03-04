@@ -152,19 +152,19 @@ sys/resource.h
 unistd.h
 -
 
-/data/guangyuh/coding_env/supermini/minisat/minisat/simp/Main.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/simp/Main.cc
 errno.h
 -
 zlib.h
 -
 minisat/utils/System.h
-/data/guangyuh/coding_env/supermini/minisat/minisat/simp/minisat/utils/System.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/simp/minisat/utils/System.h
 minisat/utils/ParseUtils.h
-/data/guangyuh/coding_env/supermini/minisat/minisat/simp/minisat/utils/ParseUtils.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/simp/minisat/utils/ParseUtils.h
 minisat/utils/Options.h
-/data/guangyuh/coding_env/supermini/minisat/minisat/simp/minisat/utils/Options.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/simp/minisat/utils/Options.h
 minisat/core/Dimacs.h
-/data/guangyuh/coding_env/supermini/minisat/minisat/simp/minisat/core/Dimacs.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/simp/minisat/core/Dimacs.h
 minisat/simp/SimpSolver.h
-/data/guangyuh/coding_env/supermini/minisat/minisat/simp/minisat/simp/SimpSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat/minisat/simp/minisat/simp/SimpSolver.h
 

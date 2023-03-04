@@ -230,6 +230,11 @@ namespace Tip {
         live_props[p].cex  = cex;
         writeResultLive(p);
     }
+    
+    void TipCirc::setUncSig(Sig x)
+    {
+        uncSig = x;
+    }
 
 
     void TipCirc::printResults() const

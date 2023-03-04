@@ -130,8 +130,8 @@ namespace Tip {
         InitInstance(const TipCirc& t_, int cnf_level_);
         ~InitInstance();
         
-        bool prove(const Clause& c, const Clause& bot, Clause& yes, SharedRef<ScheduledClause>& no, SharedRef<ScheduledClause> next = NULL);
-        bool prove(const Clause& c, const Clause& bot, Clause& yes);
+        bool prove(const Clause& c, const Clause& bot, Clause& yes, int uncontr, SharedRef<ScheduledClause>& no, SharedRef<ScheduledClause> next = NULL);
+        bool prove(const Clause& c, const Clause& bot, Clause& yes, int uncontr=2);
 
         void reduceClause(Clause& c);
 
@@ -188,7 +188,7 @@ namespace Tip {
                      int cnf_level_, uint32_t max_min_tries_, int depth_, bool use_ind_, bool use_uniq_);
         ~PropInstance();
         
-        lbool prove(Sig p, SharedRef<ScheduledClause>& no, unsigned cycle);
+        lbool prove(Sig p, SharedRef<ScheduledClause>& no, unsigned cycle, int uncontr);
 
         uint64_t props();
         uint64_t solves();
@@ -240,8 +240,9 @@ namespace Tip {
                      int cnf_level_, uint32_t max_min_tries_);
         ~StepInstance();
         
-        bool prove(const Clause& c, Clause& yes, SharedRef<ScheduledClause>& no, SharedRef<ScheduledClause> next = NULL);
-        bool prove(const Clause& c, Clause& yes);
+        // uncontrollable: 0 = false, 1 = true; 2 = undef
+        bool prove(const Clause& c, Clause& yes, SharedRef<ScheduledClause>& no, SharedRef<ScheduledClause> next = NULL, int uncontr = 2);
+        bool prove(const Clause& c, Clause& yes, int uncontr = 2);
 
         uint64_t props();
         uint64_t solves();

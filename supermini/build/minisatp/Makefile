@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/supermini
+CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/guangyuh/coding_env/supermini/build
+CMAKE_BINARY_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles /data/guangyuh/coding_env/supermini/build/minisatp/CMakeFiles/progress.marks
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles /data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisatp/CMakeFiles/progress.marks
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/clean
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/preinstall
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/preinstall
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 minisatp/CMakeFiles/minisatp.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp.dir/rule
 .PHONY : minisatp/CMakeFiles/minisatp.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ minisatp: minisatp/CMakeFiles/minisatp.dir/rule
 
 # fast build rule for target.
 minisatp/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/build
 .PHONY : minisatp/fast
 
 # Convenience name for target.
 minisatp/CMakeFiles/minisatp-lib-shared.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp-lib-shared.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp-lib-shared.dir/rule
 .PHONY : minisatp/CMakeFiles/minisatp-lib-shared.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ minisatp-lib-shared: minisatp/CMakeFiles/minisatp-lib-shared.dir/rule
 
 # fast build rule for target.
 minisatp-lib-shared/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/build
 .PHONY : minisatp-lib-shared/fast
 
 # Convenience name for target.
 minisatp/CMakeFiles/minisatp-lib-static.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp-lib-static.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp-lib-static.dir/rule
 .PHONY : minisatp/CMakeFiles/minisatp-lib-static.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ minisatp-lib-static: minisatp/CMakeFiles/minisatp-lib-static.dir/rule
 
 # fast build rule for target.
 minisatp-lib-static/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/build
 .PHONY : minisatp-lib-static/fast
 
 ADTs/FEnv.o: ADTs/FEnv.cc.o
@@ -207,8 +207,8 @@ ADTs/FEnv.o: ADTs/FEnv.cc.o
 
 # target to build an object file
 ADTs/FEnv.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/FEnv.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/FEnv.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/FEnv.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/FEnv.cc.o
 .PHONY : ADTs/FEnv.cc.o
 
 ADTs/FEnv.i: ADTs/FEnv.cc.i
@@ -217,8 +217,8 @@ ADTs/FEnv.i: ADTs/FEnv.cc.i
 
 # target to preprocess a source file
 ADTs/FEnv.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/FEnv.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/FEnv.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/FEnv.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/FEnv.cc.i
 .PHONY : ADTs/FEnv.cc.i
 
 ADTs/FEnv.s: ADTs/FEnv.cc.s
@@ -227,8 +227,8 @@ ADTs/FEnv.s: ADTs/FEnv.cc.s
 
 # target to generate assembly for a file
 ADTs/FEnv.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/FEnv.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/FEnv.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/FEnv.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/FEnv.cc.s
 .PHONY : ADTs/FEnv.cc.s
 
 ADTs/File.o: ADTs/File.cc.o
@@ -237,8 +237,8 @@ ADTs/File.o: ADTs/File.cc.o
 
 # target to build an object file
 ADTs/File.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/File.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/File.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/File.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/File.cc.o
 .PHONY : ADTs/File.cc.o
 
 ADTs/File.i: ADTs/File.cc.i
@@ -247,8 +247,8 @@ ADTs/File.i: ADTs/File.cc.i
 
 # target to preprocess a source file
 ADTs/File.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/File.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/File.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/File.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/File.cc.i
 .PHONY : ADTs/File.cc.i
 
 ADTs/File.s: ADTs/File.cc.s
@@ -257,8 +257,8 @@ ADTs/File.s: ADTs/File.cc.s
 
 # target to generate assembly for a file
 ADTs/File.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/File.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/File.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/File.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/File.cc.s
 .PHONY : ADTs/File.cc.s
 
 ADTs/Global.o: ADTs/Global.cc.o
@@ -267,8 +267,8 @@ ADTs/Global.o: ADTs/Global.cc.o
 
 # target to build an object file
 ADTs/Global.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/Global.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/Global.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/Global.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/Global.cc.o
 .PHONY : ADTs/Global.cc.o
 
 ADTs/Global.i: ADTs/Global.cc.i
@@ -277,8 +277,8 @@ ADTs/Global.i: ADTs/Global.cc.i
 
 # target to preprocess a source file
 ADTs/Global.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/Global.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/Global.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/Global.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/Global.cc.i
 .PHONY : ADTs/Global.cc.i
 
 ADTs/Global.s: ADTs/Global.cc.s
@@ -287,8 +287,8 @@ ADTs/Global.s: ADTs/Global.cc.s
 
 # target to generate assembly for a file
 ADTs/Global.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/Global.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/Global.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/ADTs/Global.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/ADTs/Global.cc.s
 .PHONY : ADTs/Global.cc.s
 
 Debug.o: Debug.cc.o
@@ -297,8 +297,8 @@ Debug.o: Debug.cc.o
 
 # target to build an object file
 Debug.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Debug.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Debug.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Debug.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Debug.cc.o
 .PHONY : Debug.cc.o
 
 Debug.i: Debug.cc.i
@@ -307,8 +307,8 @@ Debug.i: Debug.cc.i
 
 # target to preprocess a source file
 Debug.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Debug.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Debug.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Debug.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Debug.cc.i
 .PHONY : Debug.cc.i
 
 Debug.s: Debug.cc.s
@@ -317,8 +317,8 @@ Debug.s: Debug.cc.s
 
 # target to generate assembly for a file
 Debug.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Debug.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Debug.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Debug.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Debug.cc.s
 .PHONY : Debug.cc.s
 
 Hardware_adders.o: Hardware_adders.cc.o
@@ -327,8 +327,8 @@ Hardware_adders.o: Hardware_adders.cc.o
 
 # target to build an object file
 Hardware_adders.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_adders.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_adders.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_adders.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_adders.cc.o
 .PHONY : Hardware_adders.cc.o
 
 Hardware_adders.i: Hardware_adders.cc.i
@@ -337,8 +337,8 @@ Hardware_adders.i: Hardware_adders.cc.i
 
 # target to preprocess a source file
 Hardware_adders.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_adders.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_adders.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_adders.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_adders.cc.i
 .PHONY : Hardware_adders.cc.i
 
 Hardware_adders.s: Hardware_adders.cc.s
@@ -347,8 +347,8 @@ Hardware_adders.s: Hardware_adders.cc.s
 
 # target to generate assembly for a file
 Hardware_adders.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_adders.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_adders.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_adders.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_adders.cc.s
 .PHONY : Hardware_adders.cc.s
 
 Hardware_clausify.o: Hardware_clausify.cc.o
@@ -357,8 +357,8 @@ Hardware_clausify.o: Hardware_clausify.cc.o
 
 # target to build an object file
 Hardware_clausify.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_clausify.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_clausify.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_clausify.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_clausify.cc.o
 .PHONY : Hardware_clausify.cc.o
 
 Hardware_clausify.i: Hardware_clausify.cc.i
@@ -367,8 +367,8 @@ Hardware_clausify.i: Hardware_clausify.cc.i
 
 # target to preprocess a source file
 Hardware_clausify.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_clausify.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_clausify.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_clausify.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_clausify.cc.i
 .PHONY : Hardware_clausify.cc.i
 
 Hardware_clausify.s: Hardware_clausify.cc.s
@@ -377,8 +377,8 @@ Hardware_clausify.s: Hardware_clausify.cc.s
 
 # target to generate assembly for a file
 Hardware_clausify.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_clausify.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_clausify.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_clausify.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_clausify.cc.s
 .PHONY : Hardware_clausify.cc.s
 
 Hardware_sorters.o: Hardware_sorters.cc.o
@@ -387,8 +387,8 @@ Hardware_sorters.o: Hardware_sorters.cc.o
 
 # target to build an object file
 Hardware_sorters.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_sorters.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_sorters.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_sorters.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_sorters.cc.o
 .PHONY : Hardware_sorters.cc.o
 
 Hardware_sorters.i: Hardware_sorters.cc.i
@@ -397,8 +397,8 @@ Hardware_sorters.i: Hardware_sorters.cc.i
 
 # target to preprocess a source file
 Hardware_sorters.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_sorters.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_sorters.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_sorters.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_sorters.cc.i
 .PHONY : Hardware_sorters.cc.i
 
 Hardware_sorters.s: Hardware_sorters.cc.s
@@ -407,8 +407,8 @@ Hardware_sorters.s: Hardware_sorters.cc.s
 
 # target to generate assembly for a file
 Hardware_sorters.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_sorters.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_sorters.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Hardware_sorters.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Hardware_sorters.cc.s
 .PHONY : Hardware_sorters.cc.s
 
 Main.o: Main.cc.o
@@ -417,9 +417,9 @@ Main.o: Main.cc.o
 
 # target to build an object file
 Main.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/Main.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Main.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Main.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/Main.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Main.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Main.cc.o
 .PHONY : Main.cc.o
 
 Main.i: Main.cc.i
@@ -428,9 +428,9 @@ Main.i: Main.cc.i
 
 # target to preprocess a source file
 Main.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/Main.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Main.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Main.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/Main.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Main.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Main.cc.i
 .PHONY : Main.cc.i
 
 Main.s: Main.cc.s
@@ -439,9 +439,9 @@ Main.s: Main.cc.s
 
 # target to generate assembly for a file
 Main.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/Main.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Main.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Main.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/Main.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/Main.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/Main.cc.s
 .PHONY : Main.cc.s
 
 PbParser.o: PbParser.cc.o
@@ -450,8 +450,8 @@ PbParser.o: PbParser.cc.o
 
 # target to build an object file
 PbParser.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbParser.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbParser.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbParser.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbParser.cc.o
 .PHONY : PbParser.cc.o
 
 PbParser.i: PbParser.cc.i
@@ -460,8 +460,8 @@ PbParser.i: PbParser.cc.i
 
 # target to preprocess a source file
 PbParser.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbParser.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbParser.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbParser.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbParser.cc.i
 .PHONY : PbParser.cc.i
 
 PbParser.s: PbParser.cc.s
@@ -470,8 +470,8 @@ PbParser.s: PbParser.cc.s
 
 # target to generate assembly for a file
 PbParser.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbParser.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbParser.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbParser.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbParser.cc.s
 .PHONY : PbParser.cc.s
 
 PbSolver.o: PbSolver.cc.o
@@ -480,8 +480,8 @@ PbSolver.o: PbSolver.cc.o
 
 # target to build an object file
 PbSolver.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver.cc.o
 .PHONY : PbSolver.cc.o
 
 PbSolver.i: PbSolver.cc.i
@@ -490,8 +490,8 @@ PbSolver.i: PbSolver.cc.i
 
 # target to preprocess a source file
 PbSolver.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver.cc.i
 .PHONY : PbSolver.cc.i
 
 PbSolver.s: PbSolver.cc.s
@@ -500,8 +500,8 @@ PbSolver.s: PbSolver.cc.s
 
 # target to generate assembly for a file
 PbSolver.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver.cc.s
 .PHONY : PbSolver.cc.s
 
 PbSolver_convert.o: PbSolver_convert.cc.o
@@ -510,8 +510,8 @@ PbSolver_convert.o: PbSolver_convert.cc.o
 
 # target to build an object file
 PbSolver_convert.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convert.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convert.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convert.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convert.cc.o
 .PHONY : PbSolver_convert.cc.o
 
 PbSolver_convert.i: PbSolver_convert.cc.i
@@ -520,8 +520,8 @@ PbSolver_convert.i: PbSolver_convert.cc.i
 
 # target to preprocess a source file
 PbSolver_convert.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convert.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convert.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convert.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convert.cc.i
 .PHONY : PbSolver_convert.cc.i
 
 PbSolver_convert.s: PbSolver_convert.cc.s
@@ -530,8 +530,8 @@ PbSolver_convert.s: PbSolver_convert.cc.s
 
 # target to generate assembly for a file
 PbSolver_convert.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convert.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convert.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convert.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convert.cc.s
 .PHONY : PbSolver_convert.cc.s
 
 PbSolver_convertAdd.o: PbSolver_convertAdd.cc.o
@@ -540,8 +540,8 @@ PbSolver_convertAdd.o: PbSolver_convertAdd.cc.o
 
 # target to build an object file
 PbSolver_convertAdd.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertAdd.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertAdd.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertAdd.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertAdd.cc.o
 .PHONY : PbSolver_convertAdd.cc.o
 
 PbSolver_convertAdd.i: PbSolver_convertAdd.cc.i
@@ -550,8 +550,8 @@ PbSolver_convertAdd.i: PbSolver_convertAdd.cc.i
 
 # target to preprocess a source file
 PbSolver_convertAdd.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertAdd.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertAdd.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertAdd.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertAdd.cc.i
 .PHONY : PbSolver_convertAdd.cc.i
 
 PbSolver_convertAdd.s: PbSolver_convertAdd.cc.s
@@ -560,8 +560,8 @@ PbSolver_convertAdd.s: PbSolver_convertAdd.cc.s
 
 # target to generate assembly for a file
 PbSolver_convertAdd.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertAdd.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertAdd.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertAdd.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertAdd.cc.s
 .PHONY : PbSolver_convertAdd.cc.s
 
 PbSolver_convertBdd.o: PbSolver_convertBdd.cc.o
@@ -570,8 +570,8 @@ PbSolver_convertBdd.o: PbSolver_convertBdd.cc.o
 
 # target to build an object file
 PbSolver_convertBdd.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertBdd.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertBdd.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertBdd.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertBdd.cc.o
 .PHONY : PbSolver_convertBdd.cc.o
 
 PbSolver_convertBdd.i: PbSolver_convertBdd.cc.i
@@ -580,8 +580,8 @@ PbSolver_convertBdd.i: PbSolver_convertBdd.cc.i
 
 # target to preprocess a source file
 PbSolver_convertBdd.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertBdd.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertBdd.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertBdd.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertBdd.cc.i
 .PHONY : PbSolver_convertBdd.cc.i
 
 PbSolver_convertBdd.s: PbSolver_convertBdd.cc.s
@@ -590,8 +590,8 @@ PbSolver_convertBdd.s: PbSolver_convertBdd.cc.s
 
 # target to generate assembly for a file
 PbSolver_convertBdd.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertBdd.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertBdd.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertBdd.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertBdd.cc.s
 .PHONY : PbSolver_convertBdd.cc.s
 
 PbSolver_convertSort.o: PbSolver_convertSort.cc.o
@@ -600,8 +600,8 @@ PbSolver_convertSort.o: PbSolver_convertSort.cc.o
 
 # target to build an object file
 PbSolver_convertSort.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertSort.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertSort.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertSort.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertSort.cc.o
 .PHONY : PbSolver_convertSort.cc.o
 
 PbSolver_convertSort.i: PbSolver_convertSort.cc.i
@@ -610,8 +610,8 @@ PbSolver_convertSort.i: PbSolver_convertSort.cc.i
 
 # target to preprocess a source file
 PbSolver_convertSort.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertSort.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertSort.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertSort.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertSort.cc.i
 .PHONY : PbSolver_convertSort.cc.i
 
 PbSolver_convertSort.s: PbSolver_convertSort.cc.s
@@ -620,8 +620,8 @@ PbSolver_convertSort.s: PbSolver_convertSort.cc.s
 
 # target to generate assembly for a file
 PbSolver_convertSort.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertSort.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertSort.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/PbSolver_convertSort.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/PbSolver_convertSort.cc.s
 .PHONY : PbSolver_convertSort.cc.s
 
 # Help Target
@@ -692,6 +692,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

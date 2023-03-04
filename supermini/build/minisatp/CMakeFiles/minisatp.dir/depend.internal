@@ -22,8 +22,8 @@ minisatp/CMakeFiles/minisatp.dir/Main.cc.o
  ../minisatp/ADTs/StackAlloc.h
  ../minisatp/ADTs/VecAlloc.h
  ../minisatp/ADTs/VecMaps.h
- /data/guangyuh/coding_env/supermini/minisatp/Debug.h
- /data/guangyuh/coding_env/supermini/minisatp/Hardware.h
- /data/guangyuh/coding_env/supermini/minisatp/Main.cc
- /data/guangyuh/coding_env/supermini/minisatp/PbParser.h
- /data/guangyuh/coding_env/supermini/minisatp/PbSolver.h
+ /data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Debug.h
+ /data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Hardware.h
+ /data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Main.cc
+ /data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbParser.h
+ /data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbSolver.h

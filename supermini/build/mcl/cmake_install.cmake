@@ -1,4 +1,4 @@
-# Install script for directory: /data/guangyuh/coding_env/supermini/mcl
+# Install script for directory: /data/guangyuh/coding_env/PDR_based_SC/supermini/mcl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/data/guangyuh/coding_env/supermini/build/mcl/libmcl.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl/libmcl.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -54,8 +54,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/data/guangyuh/coding_env/supermini/build/mcl/libmcl.so.1.0.0"
-    "/data/guangyuh/coding_env/supermini/build/mcl/libmcl.so.1"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl/libmcl.so.1.0.0"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl/libmcl.so.1"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmcl.so.1.0.0"
@@ -65,7 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/data/guangyuh/coding_env/supermini/build/minisat:"
+           OLD_RPATH "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat:"
            NEW_RPATH "")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/bin/strip" "${file}")
@@ -81,12 +81,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmcl.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/data/guangyuh/coding_env/supermini/build/mcl/libmcl.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl/libmcl.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmcl.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmcl.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmcl.so"
-         OLD_RPATH "/data/guangyuh/coding_env/supermini/build/minisat:"
+         OLD_RPATH "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmcl.so")
@@ -95,6 +95,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mcl" TYPE DIRECTORY FILES "/data/guangyuh/coding_env/supermini/mcl/mcl" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mcl" TYPE DIRECTORY FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

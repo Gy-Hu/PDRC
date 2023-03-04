@@ -152,45 +152,45 @@ typeinfo
 
 ../minisatp/ADTs/VecMaps.h
 
-/data/guangyuh/coding_env/supermini/minisatp/Debug.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Debug.h
 minisat/core/SolverTypes.h
-/data/guangyuh/coding_env/supermini/minisatp/minisat/core/SolverTypes.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/minisat/core/SolverTypes.h
 PbSolver.h
-/data/guangyuh/coding_env/supermini/minisatp/PbSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbSolver.h
 FEnv.h
-/data/guangyuh/coding_env/supermini/minisatp/FEnv.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/FEnv.h
 
-/data/guangyuh/coding_env/supermini/minisatp/Hardware.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Hardware.h
 PbSolver.h
-/data/guangyuh/coding_env/supermini/minisatp/PbSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbSolver.h
 FEnv.h
-/data/guangyuh/coding_env/supermini/minisatp/FEnv.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/FEnv.h
 
-/data/guangyuh/coding_env/supermini/minisatp/Main.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Main.cc
 unistd.h
 -
 signal.h
 -
 PbSolver.h
-/data/guangyuh/coding_env/supermini/minisatp/PbSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbSolver.h
 PbParser.h
-/data/guangyuh/coding_env/supermini/minisatp/PbParser.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbParser.h
 Hardware.h
-/data/guangyuh/coding_env/supermini/minisatp/Hardware.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Hardware.h
 Debug.h
-/data/guangyuh/coding_env/supermini/minisatp/Debug.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Debug.h
 
-/data/guangyuh/coding_env/supermini/minisatp/PbParser.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbParser.h
 PbSolver.h
-/data/guangyuh/coding_env/supermini/minisatp/PbSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbSolver.h
 
-/data/guangyuh/coding_env/supermini/minisatp/PbSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/PbSolver.h
 minisat/mtl/Vec.h
-/data/guangyuh/coding_env/supermini/minisatp/minisat/mtl/Vec.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/minisat/mtl/Vec.h
 minisat/simp/SimpSolver.h
-/data/guangyuh/coding_env/supermini/minisatp/minisat/simp/SimpSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/minisat/simp/SimpSolver.h
 Map.h
-/data/guangyuh/coding_env/supermini/minisatp/Map.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/Map.h
 StackAlloc.h
-/data/guangyuh/coding_env/supermini/minisatp/StackAlloc.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/StackAlloc.h
 

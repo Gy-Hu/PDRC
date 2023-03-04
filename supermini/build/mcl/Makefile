@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/supermini
+CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/guangyuh/coding_env/supermini/build
+CMAKE_BINARY_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles /data/guangyuh/coding_env/supermini/build/mcl/CMakeFiles/progress.marks
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles /data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl/CMakeFiles/progress.marks
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/clean
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/preinstall
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/preinstall
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 mcl/CMakeFiles/mcl-lib-shared.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/CMakeFiles/mcl-lib-shared.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/CMakeFiles/mcl-lib-shared.dir/rule
 .PHONY : mcl/CMakeFiles/mcl-lib-shared.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ mcl-lib-shared: mcl/CMakeFiles/mcl-lib-shared.dir/rule
 
 # fast build rule for target.
 mcl-lib-shared/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/build
 .PHONY : mcl-lib-shared/fast
 
 # Convenience name for target.
 mcl/CMakeFiles/mcl-lib-static.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/CMakeFiles/mcl-lib-static.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 mcl/CMakeFiles/mcl-lib-static.dir/rule
 .PHONY : mcl/CMakeFiles/mcl-lib-static.dir/rule
 
 # Convenience name for target.
@@ -183,7 +183,7 @@ mcl-lib-static: mcl/CMakeFiles/mcl-lib-static.dir/rule
 
 # fast build rule for target.
 mcl-lib-static/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/build
 .PHONY : mcl-lib-static/fast
 
 mcl/Aiger.o: mcl/Aiger.cc.o
@@ -192,8 +192,8 @@ mcl/Aiger.o: mcl/Aiger.cc.o
 
 # target to build an object file
 mcl/Aiger.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Aiger.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Aiger.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Aiger.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Aiger.cc.o
 .PHONY : mcl/Aiger.cc.o
 
 mcl/Aiger.i: mcl/Aiger.cc.i
@@ -202,8 +202,8 @@ mcl/Aiger.i: mcl/Aiger.cc.i
 
 # target to preprocess a source file
 mcl/Aiger.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Aiger.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Aiger.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Aiger.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Aiger.cc.i
 .PHONY : mcl/Aiger.cc.i
 
 mcl/Aiger.s: mcl/Aiger.cc.s
@@ -212,8 +212,8 @@ mcl/Aiger.s: mcl/Aiger.cc.s
 
 # target to generate assembly for a file
 mcl/Aiger.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Aiger.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Aiger.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Aiger.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Aiger.cc.s
 .PHONY : mcl/Aiger.cc.s
 
 mcl/Circ.o: mcl/Circ.cc.o
@@ -222,8 +222,8 @@ mcl/Circ.o: mcl/Circ.cc.o
 
 # target to build an object file
 mcl/Circ.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Circ.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Circ.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Circ.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Circ.cc.o
 .PHONY : mcl/Circ.cc.o
 
 mcl/Circ.i: mcl/Circ.cc.i
@@ -232,8 +232,8 @@ mcl/Circ.i: mcl/Circ.cc.i
 
 # target to preprocess a source file
 mcl/Circ.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Circ.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Circ.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Circ.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Circ.cc.i
 .PHONY : mcl/Circ.cc.i
 
 mcl/Circ.s: mcl/Circ.cc.s
@@ -242,8 +242,8 @@ mcl/Circ.s: mcl/Circ.cc.s
 
 # target to generate assembly for a file
 mcl/Circ.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Circ.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Circ.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Circ.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Circ.cc.s
 .PHONY : mcl/Circ.cc.s
 
 mcl/CircPrelude.o: mcl/CircPrelude.cc.o
@@ -252,8 +252,8 @@ mcl/CircPrelude.o: mcl/CircPrelude.cc.o
 
 # target to build an object file
 mcl/CircPrelude.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/CircPrelude.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/CircPrelude.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/CircPrelude.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/CircPrelude.cc.o
 .PHONY : mcl/CircPrelude.cc.o
 
 mcl/CircPrelude.i: mcl/CircPrelude.cc.i
@@ -262,8 +262,8 @@ mcl/CircPrelude.i: mcl/CircPrelude.cc.i
 
 # target to preprocess a source file
 mcl/CircPrelude.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/CircPrelude.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/CircPrelude.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/CircPrelude.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/CircPrelude.cc.i
 .PHONY : mcl/CircPrelude.cc.i
 
 mcl/CircPrelude.s: mcl/CircPrelude.cc.s
@@ -272,8 +272,8 @@ mcl/CircPrelude.s: mcl/CircPrelude.cc.s
 
 # target to generate assembly for a file
 mcl/CircPrelude.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/CircPrelude.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/CircPrelude.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/CircPrelude.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/CircPrelude.cc.s
 .PHONY : mcl/CircPrelude.cc.s
 
 mcl/DagShrink.o: mcl/DagShrink.cc.o
@@ -282,8 +282,8 @@ mcl/DagShrink.o: mcl/DagShrink.cc.o
 
 # target to build an object file
 mcl/DagShrink.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/DagShrink.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/DagShrink.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/DagShrink.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/DagShrink.cc.o
 .PHONY : mcl/DagShrink.cc.o
 
 mcl/DagShrink.i: mcl/DagShrink.cc.i
@@ -292,8 +292,8 @@ mcl/DagShrink.i: mcl/DagShrink.cc.i
 
 # target to preprocess a source file
 mcl/DagShrink.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/DagShrink.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/DagShrink.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/DagShrink.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/DagShrink.cc.i
 .PHONY : mcl/DagShrink.cc.i
 
 mcl/DagShrink.s: mcl/DagShrink.cc.s
@@ -302,8 +302,8 @@ mcl/DagShrink.s: mcl/DagShrink.cc.s
 
 # target to generate assembly for a file
 mcl/DagShrink.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/DagShrink.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/DagShrink.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/DagShrink.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/DagShrink.cc.s
 .PHONY : mcl/DagShrink.cc.s
 
 mcl/Equivs.o: mcl/Equivs.cc.o
@@ -312,8 +312,8 @@ mcl/Equivs.o: mcl/Equivs.cc.o
 
 # target to build an object file
 mcl/Equivs.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Equivs.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Equivs.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Equivs.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Equivs.cc.o
 .PHONY : mcl/Equivs.cc.o
 
 mcl/Equivs.i: mcl/Equivs.cc.i
@@ -322,8 +322,8 @@ mcl/Equivs.i: mcl/Equivs.cc.i
 
 # target to preprocess a source file
 mcl/Equivs.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Equivs.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Equivs.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Equivs.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Equivs.cc.i
 .PHONY : mcl/Equivs.cc.i
 
 mcl/Equivs.s: mcl/Equivs.cc.s
@@ -332,8 +332,8 @@ mcl/Equivs.s: mcl/Equivs.cc.s
 
 # target to generate assembly for a file
 mcl/Equivs.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Equivs.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Equivs.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Equivs.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Equivs.cc.s
 .PHONY : mcl/Equivs.cc.s
 
 mcl/Flops.o: mcl/Flops.cc.o
@@ -342,8 +342,8 @@ mcl/Flops.o: mcl/Flops.cc.o
 
 # target to build an object file
 mcl/Flops.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Flops.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Flops.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Flops.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Flops.cc.o
 .PHONY : mcl/Flops.cc.o
 
 mcl/Flops.i: mcl/Flops.cc.i
@@ -352,8 +352,8 @@ mcl/Flops.i: mcl/Flops.cc.i
 
 # target to preprocess a source file
 mcl/Flops.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Flops.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Flops.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Flops.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Flops.cc.i
 .PHONY : mcl/Flops.cc.i
 
 mcl/Flops.s: mcl/Flops.cc.s
@@ -362,8 +362,8 @@ mcl/Flops.s: mcl/Flops.cc.s
 
 # target to generate assembly for a file
 mcl/Flops.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Flops.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Flops.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Flops.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Flops.cc.s
 .PHONY : mcl/Flops.cc.s
 
 mcl/Hardware.o: mcl/Hardware.cc.o
@@ -372,8 +372,8 @@ mcl/Hardware.o: mcl/Hardware.cc.o
 
 # target to build an object file
 mcl/Hardware.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Hardware.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Hardware.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Hardware.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Hardware.cc.o
 .PHONY : mcl/Hardware.cc.o
 
 mcl/Hardware.i: mcl/Hardware.cc.i
@@ -382,8 +382,8 @@ mcl/Hardware.i: mcl/Hardware.cc.i
 
 # target to preprocess a source file
 mcl/Hardware.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Hardware.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Hardware.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Hardware.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Hardware.cc.i
 .PHONY : mcl/Hardware.cc.i
 
 mcl/Hardware.s: mcl/Hardware.cc.s
@@ -392,8 +392,8 @@ mcl/Hardware.s: mcl/Hardware.cc.s
 
 # target to generate assembly for a file
 mcl/Hardware.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Hardware.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Hardware.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Hardware.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Hardware.cc.s
 .PHONY : mcl/Hardware.cc.s
 
 mcl/Matching.o: mcl/Matching.cc.o
@@ -402,8 +402,8 @@ mcl/Matching.o: mcl/Matching.cc.o
 
 # target to build an object file
 mcl/Matching.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Matching.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Matching.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Matching.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Matching.cc.o
 .PHONY : mcl/Matching.cc.o
 
 mcl/Matching.i: mcl/Matching.cc.i
@@ -412,8 +412,8 @@ mcl/Matching.i: mcl/Matching.cc.i
 
 # target to preprocess a source file
 mcl/Matching.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Matching.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Matching.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Matching.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Matching.cc.i
 .PHONY : mcl/Matching.cc.i
 
 mcl/Matching.s: mcl/Matching.cc.s
@@ -422,8 +422,8 @@ mcl/Matching.s: mcl/Matching.cc.s
 
 # target to generate assembly for a file
 mcl/Matching.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Matching.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Matching.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Matching.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Matching.cc.s
 .PHONY : mcl/Matching.cc.s
 
 mcl/Normalization.o: mcl/Normalization.cc.o
@@ -432,8 +432,8 @@ mcl/Normalization.o: mcl/Normalization.cc.o
 
 # target to build an object file
 mcl/Normalization.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Normalization.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Normalization.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Normalization.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Normalization.cc.o
 .PHONY : mcl/Normalization.cc.o
 
 mcl/Normalization.i: mcl/Normalization.cc.i
@@ -442,8 +442,8 @@ mcl/Normalization.i: mcl/Normalization.cc.i
 
 # target to preprocess a source file
 mcl/Normalization.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Normalization.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Normalization.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Normalization.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Normalization.cc.i
 .PHONY : mcl/Normalization.cc.i
 
 mcl/Normalization.s: mcl/Normalization.cc.s
@@ -452,8 +452,8 @@ mcl/Normalization.s: mcl/Normalization.cc.s
 
 # target to generate assembly for a file
 mcl/Normalization.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Normalization.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Normalization.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Normalization.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Normalization.cc.s
 .PHONY : mcl/Normalization.cc.s
 
 mcl/ReTime.o: mcl/ReTime.cc.o
@@ -462,8 +462,8 @@ mcl/ReTime.o: mcl/ReTime.cc.o
 
 # target to build an object file
 mcl/ReTime.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/ReTime.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/ReTime.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/ReTime.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/ReTime.cc.o
 .PHONY : mcl/ReTime.cc.o
 
 mcl/ReTime.i: mcl/ReTime.cc.i
@@ -472,8 +472,8 @@ mcl/ReTime.i: mcl/ReTime.cc.i
 
 # target to preprocess a source file
 mcl/ReTime.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/ReTime.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/ReTime.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/ReTime.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/ReTime.cc.i
 .PHONY : mcl/ReTime.cc.i
 
 mcl/ReTime.s: mcl/ReTime.cc.s
@@ -482,8 +482,8 @@ mcl/ReTime.s: mcl/ReTime.cc.s
 
 # target to generate assembly for a file
 mcl/ReTime.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/ReTime.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/ReTime.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/ReTime.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/ReTime.cc.s
 .PHONY : mcl/ReTime.cc.s
 
 mcl/SatSweep.o: mcl/SatSweep.cc.o
@@ -492,8 +492,8 @@ mcl/SatSweep.o: mcl/SatSweep.cc.o
 
 # target to build an object file
 mcl/SatSweep.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/SatSweep.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/SatSweep.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/SatSweep.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/SatSweep.cc.o
 .PHONY : mcl/SatSweep.cc.o
 
 mcl/SatSweep.i: mcl/SatSweep.cc.i
@@ -502,8 +502,8 @@ mcl/SatSweep.i: mcl/SatSweep.cc.i
 
 # target to preprocess a source file
 mcl/SatSweep.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/SatSweep.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/SatSweep.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/SatSweep.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/SatSweep.cc.i
 .PHONY : mcl/SatSweep.cc.i
 
 mcl/SatSweep.s: mcl/SatSweep.cc.s
@@ -512,8 +512,8 @@ mcl/SatSweep.s: mcl/SatSweep.cc.s
 
 # target to generate assembly for a file
 mcl/SatSweep.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/SatSweep.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/SatSweep.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/SatSweep.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/SatSweep.cc.s
 .PHONY : mcl/SatSweep.cc.s
 
 mcl/Smv.o: mcl/Smv.cc.o
@@ -522,8 +522,8 @@ mcl/Smv.o: mcl/Smv.cc.o
 
 # target to build an object file
 mcl/Smv.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Smv.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Smv.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Smv.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Smv.cc.o
 .PHONY : mcl/Smv.cc.o
 
 mcl/Smv.i: mcl/Smv.cc.i
@@ -532,8 +532,8 @@ mcl/Smv.i: mcl/Smv.cc.i
 
 # target to preprocess a source file
 mcl/Smv.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Smv.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Smv.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Smv.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Smv.cc.i
 .PHONY : mcl/Smv.cc.i
 
 mcl/Smv.s: mcl/Smv.cc.s
@@ -542,8 +542,8 @@ mcl/Smv.s: mcl/Smv.cc.s
 
 # target to generate assembly for a file
 mcl/Smv.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Smv.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Smv.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/mcl/Smv.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/mcl/Smv.cc.s
 .PHONY : mcl/Smv.cc.s
 
 # Help Target
@@ -607,6 +607,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

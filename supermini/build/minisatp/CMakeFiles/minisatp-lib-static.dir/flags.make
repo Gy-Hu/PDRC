@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -g -DNDEBUG -fomit-frame-pointer   -Wall -include Global.h -incl
 
 CXX_DEFINES = -DMINISAT_CONSTANTS_AS_MACROS -D_FILE_OFFSET_BITS=64 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 
-CXX_INCLUDES = -I/data/guangyuh/coding_env/supermini/minisat -I/data/guangyuh/coding_env/supermini/minisatp -I/data/guangyuh/coding_env/supermini/minisatp/ADTs 
+CXX_INCLUDES = -I/data/guangyuh/coding_env/PDR_based_SC/supermini/minisat -I/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp -I/data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp/ADTs 
 

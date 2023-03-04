@@ -14,7 +14,8 @@ import System.Exit (ExitCode(ExitSuccess))
 --------------------------------------------------------------------------------
 
 inputFailedFile :: FilePath
-inputFailedFile  = "input_failed.aig"
+--inputFailedFile  = "input_failed.aig"
+inputFailedFile = "Examples/phils5_100"
 inputFailedFile0 = "input_failed0.aig"
 inputFailedFile2 = "input_failed2.aig"
 
@@ -201,7 +202,8 @@ tip circ args =
            results safs livs ls
      return (results [] [] (lines s))
  where
-  tipExe = "../build/debug-fast/tip3/tip"
+--  tipExe = "../build/debug-fast/tip3/tip"
+  tipExe = "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/tip/tip"
 
   inputFile  = "input.aig"
   resultFile = "result.txt"

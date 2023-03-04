@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/supermini
+CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/guangyuh/coding_env/supermini/build
+CMAKE_BINARY_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles /data/guangyuh/coding_env/supermini/build/minisat/CMakeFiles/progress.marks
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles /data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/CMakeFiles/progress.marks
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/clean
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/preinstall
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/preinstall
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 minisat/CMakeFiles/minisat_simp.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat_simp.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat_simp.dir/rule
 .PHONY : minisat/CMakeFiles/minisat_simp.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ minisat_simp: minisat/CMakeFiles/minisat_simp.dir/rule
 
 # fast build rule for target.
 minisat_simp/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/build
 .PHONY : minisat_simp/fast
 
 # Convenience name for target.
 minisat/CMakeFiles/minisat_core.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat_core.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat_core.dir/rule
 .PHONY : minisat/CMakeFiles/minisat_core.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ minisat_core: minisat/CMakeFiles/minisat_core.dir/rule
 
 # fast build rule for target.
 minisat_core/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/build
 .PHONY : minisat_core/fast
 
 # Convenience name for target.
 minisat/CMakeFiles/minisat-lib-shared.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat-lib-shared.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat-lib-shared.dir/rule
 .PHONY : minisat/CMakeFiles/minisat-lib-shared.dir/rule
 
 # Convenience name for target.
@@ -198,12 +198,12 @@ minisat-lib-shared: minisat/CMakeFiles/minisat-lib-shared.dir/rule
 
 # fast build rule for target.
 minisat-lib-shared/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/build
 .PHONY : minisat-lib-shared/fast
 
 # Convenience name for target.
 minisat/CMakeFiles/minisat-lib-static.dir/rule:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat-lib-static.dir/rule
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat-lib-static.dir/rule
 .PHONY : minisat/CMakeFiles/minisat-lib-static.dir/rule
 
 # Convenience name for target.
@@ -213,7 +213,7 @@ minisat-lib-static: minisat/CMakeFiles/minisat-lib-static.dir/rule
 
 # fast build rule for target.
 minisat-lib-static/fast:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/build
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/build
 .PHONY : minisat-lib-static/fast
 
 minisat/core/Main.o: minisat/core/Main.cc.o
@@ -222,7 +222,7 @@ minisat/core/Main.o: minisat/core/Main.cc.o
 
 # target to build an object file
 minisat/core/Main.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/minisat/core/Main.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/minisat/core/Main.cc.o
 .PHONY : minisat/core/Main.cc.o
 
 minisat/core/Main.i: minisat/core/Main.cc.i
@@ -231,7 +231,7 @@ minisat/core/Main.i: minisat/core/Main.cc.i
 
 # target to preprocess a source file
 minisat/core/Main.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/minisat/core/Main.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/minisat/core/Main.cc.i
 .PHONY : minisat/core/Main.cc.i
 
 minisat/core/Main.s: minisat/core/Main.cc.s
@@ -240,7 +240,7 @@ minisat/core/Main.s: minisat/core/Main.cc.s
 
 # target to generate assembly for a file
 minisat/core/Main.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/minisat/core/Main.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/minisat/core/Main.cc.s
 .PHONY : minisat/core/Main.cc.s
 
 minisat/core/Solver.o: minisat/core/Solver.cc.o
@@ -249,8 +249,8 @@ minisat/core/Solver.o: minisat/core/Solver.cc.o
 
 # target to build an object file
 minisat/core/Solver.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/core/Solver.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/core/Solver.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.o
 .PHONY : minisat/core/Solver.cc.o
 
 minisat/core/Solver.i: minisat/core/Solver.cc.i
@@ -259,8 +259,8 @@ minisat/core/Solver.i: minisat/core/Solver.cc.i
 
 # target to preprocess a source file
 minisat/core/Solver.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/core/Solver.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/core/Solver.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.i
 .PHONY : minisat/core/Solver.cc.i
 
 minisat/core/Solver.s: minisat/core/Solver.cc.s
@@ -269,8 +269,8 @@ minisat/core/Solver.s: minisat/core/Solver.cc.s
 
 # target to generate assembly for a file
 minisat/core/Solver.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/core/Solver.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/core/Solver.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.s
 .PHONY : minisat/core/Solver.cc.s
 
 minisat/simp/Main.o: minisat/simp/Main.cc.o
@@ -279,7 +279,7 @@ minisat/simp/Main.o: minisat/simp/Main.cc.o
 
 # target to build an object file
 minisat/simp/Main.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/minisat/simp/Main.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/minisat/simp/Main.cc.o
 .PHONY : minisat/simp/Main.cc.o
 
 minisat/simp/Main.i: minisat/simp/Main.cc.i
@@ -288,7 +288,7 @@ minisat/simp/Main.i: minisat/simp/Main.cc.i
 
 # target to preprocess a source file
 minisat/simp/Main.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/minisat/simp/Main.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/minisat/simp/Main.cc.i
 .PHONY : minisat/simp/Main.cc.i
 
 minisat/simp/Main.s: minisat/simp/Main.cc.s
@@ -297,7 +297,7 @@ minisat/simp/Main.s: minisat/simp/Main.cc.s
 
 # target to generate assembly for a file
 minisat/simp/Main.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/minisat/simp/Main.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/minisat/simp/Main.cc.s
 .PHONY : minisat/simp/Main.cc.s
 
 minisat/simp/SimpSolver.o: minisat/simp/SimpSolver.cc.o
@@ -306,8 +306,8 @@ minisat/simp/SimpSolver.o: minisat/simp/SimpSolver.cc.o
 
 # target to build an object file
 minisat/simp/SimpSolver.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/simp/SimpSolver.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/simp/SimpSolver.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/simp/SimpSolver.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/simp/SimpSolver.cc.o
 .PHONY : minisat/simp/SimpSolver.cc.o
 
 minisat/simp/SimpSolver.i: minisat/simp/SimpSolver.cc.i
@@ -316,8 +316,8 @@ minisat/simp/SimpSolver.i: minisat/simp/SimpSolver.cc.i
 
 # target to preprocess a source file
 minisat/simp/SimpSolver.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/simp/SimpSolver.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/simp/SimpSolver.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/simp/SimpSolver.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/simp/SimpSolver.cc.i
 .PHONY : minisat/simp/SimpSolver.cc.i
 
 minisat/simp/SimpSolver.s: minisat/simp/SimpSolver.cc.s
@@ -326,8 +326,8 @@ minisat/simp/SimpSolver.s: minisat/simp/SimpSolver.cc.s
 
 # target to generate assembly for a file
 minisat/simp/SimpSolver.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/simp/SimpSolver.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/simp/SimpSolver.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/simp/SimpSolver.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/simp/SimpSolver.cc.s
 .PHONY : minisat/simp/SimpSolver.cc.s
 
 minisat/utils/Options.o: minisat/utils/Options.cc.o
@@ -336,8 +336,8 @@ minisat/utils/Options.o: minisat/utils/Options.cc.o
 
 # target to build an object file
 minisat/utils/Options.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/Options.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/Options.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/Options.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/Options.cc.o
 .PHONY : minisat/utils/Options.cc.o
 
 minisat/utils/Options.i: minisat/utils/Options.cc.i
@@ -346,8 +346,8 @@ minisat/utils/Options.i: minisat/utils/Options.cc.i
 
 # target to preprocess a source file
 minisat/utils/Options.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/Options.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/Options.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/Options.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/Options.cc.i
 .PHONY : minisat/utils/Options.cc.i
 
 minisat/utils/Options.s: minisat/utils/Options.cc.s
@@ -356,8 +356,8 @@ minisat/utils/Options.s: minisat/utils/Options.cc.s
 
 # target to generate assembly for a file
 minisat/utils/Options.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/Options.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/Options.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/Options.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/Options.cc.s
 .PHONY : minisat/utils/Options.cc.s
 
 minisat/utils/System.o: minisat/utils/System.cc.o
@@ -366,8 +366,8 @@ minisat/utils/System.o: minisat/utils/System.cc.o
 
 # target to build an object file
 minisat/utils/System.cc.o:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/System.cc.o
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/System.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/System.cc.o
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/System.cc.o
 .PHONY : minisat/utils/System.cc.o
 
 minisat/utils/System.i: minisat/utils/System.cc.i
@@ -376,8 +376,8 @@ minisat/utils/System.i: minisat/utils/System.cc.i
 
 # target to preprocess a source file
 minisat/utils/System.cc.i:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/System.cc.i
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/System.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/System.cc.i
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/System.cc.i
 .PHONY : minisat/utils/System.cc.i
 
 minisat/utils/System.s: minisat/utils/System.cc.s
@@ -386,8 +386,8 @@ minisat/utils/System.s: minisat/utils/System.cc.s
 
 # target to generate assembly for a file
 minisat/utils/System.cc.s:
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/System.cc.s
-	cd /data/guangyuh/coding_env/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/System.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/minisat/utils/System.cc.s
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/minisat/utils/System.cc.s
 .PHONY : minisat/utils/System.cc.s
 
 # Help Target
@@ -435,6 +435,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /data/guangyuh/coding_env/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data/guangyuh/coding_env/PDR_based_SC/supermini/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

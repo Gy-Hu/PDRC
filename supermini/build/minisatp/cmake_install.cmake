@@ -1,4 +1,4 @@
-# Install script for directory: /data/guangyuh/coding_env/supermini/minisatp
+# Install script for directory: /data/guangyuh/coding_env/PDR_based_SC/supermini/minisatp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

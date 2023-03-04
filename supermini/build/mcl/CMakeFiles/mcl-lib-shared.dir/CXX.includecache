@@ -250,53 +250,53 @@ sys/resource.h
 unistd.h
 -
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Aiger.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Aiger.cc
 minisat/utils/ParseUtils.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/utils/ParseUtils.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/utils/ParseUtils.h
 mcl/Aiger.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Aiger.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Aiger.h
 mcl/CircPrelude.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/CircPrelude.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/CircPrelude.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Circ.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Circ.cc
 minisat/mtl/Sort.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/Sort.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/Sort.h
 minisat/mtl/XAlloc.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/XAlloc.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/XAlloc.h
 minisat/utils/Options.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/utils/Options.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/utils/Options.h
 mcl/Circ.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Circ.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Circ.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/CircPrelude.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/CircPrelude.cc
 mcl/CircPrelude.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/CircPrelude.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/CircPrelude.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/DagShrink.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/DagShrink.cc
 minisat/mtl/Sort.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/Sort.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/Sort.h
 minisat/utils/System.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/utils/System.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/utils/System.h
 mcl/DagShrink.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/DagShrink.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/DagShrink.h
 mcl/CircPrelude.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/CircPrelude.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/CircPrelude.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Equivs.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Equivs.cc
 minisat/mtl/Alg.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/Alg.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/Alg.h
 minisat/mtl/Sort.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/Sort.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/Sort.h
 mcl/Equivs.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Equivs.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Equivs.h
 mcl/CircPrelude.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/CircPrelude.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/CircPrelude.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Flops.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Flops.cc
 mcl/Flops.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Flops.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Flops.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Hardware.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Hardware.cc
 stdio.h
 -
 math.h
@@ -304,47 +304,47 @@ math.h
 string.h
 -
 minisat/simp/SimpSolver.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/simp/SimpSolver.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/simp/SimpSolver.h
 mcl/Hardware.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Hardware.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Hardware.h
 mcl/Clausify.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Clausify.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Clausify.h
 mcl/CircPrelude.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/CircPrelude.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/CircPrelude.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Matching.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Matching.cc
 mcl/Circ.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Circ.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Circ.h
 mcl/Matching.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Matching.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Matching.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Normalization.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Normalization.cc
 stdio.h
 -
 minisat/mtl/Sort.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/Sort.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/Sort.h
 minisat/mtl/Alg.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/Alg.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/Alg.h
 mcl/Normalization.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Normalization.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Normalization.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/ReTime.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/ReTime.cc
 mcl/DagShrink.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/DagShrink.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/DagShrink.h
 mcl/ReTime.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/ReTime.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/ReTime.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/SatSweep.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/SatSweep.cc
 minisat/mtl/Sort.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/mtl/Sort.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/mtl/Sort.h
 minisat/utils/System.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/minisat/utils/System.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/minisat/utils/System.h
 mcl/SatSweep.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/SatSweep.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/SatSweep.h
 
-/data/guangyuh/coding_env/supermini/mcl/mcl/Smv.cc
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/Smv.cc
 mcl/Matching.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Matching.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Matching.h
 mcl/Smv.h
-/data/guangyuh/coding_env/supermini/mcl/mcl/mcl/Smv.h
+/data/guangyuh/coding_env/PDR_based_SC/supermini/mcl/mcl/mcl/Smv.h
 

@@ -24,6 +24,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include "tip/induction/TripProofInstances.h"
 #include "tip/liveness/EmbedFairness.h"
 #include "tip/unroll/Bmc.h"
+#include <stdio.h>
 
 #define GENERALIZE_THEN_PUSH
 //#define VERIFY_SUBSUMPTION
@@ -63,7 +64,7 @@ namespace Tip {
         IntOption  opt_max_min_tries("RIP", "rip-min-tries","Max number of tries in model minimization", 32);
         IntOption  opt_live_enc     ("RIP", "rip-live-enc", "Incremental liveness encoding", 0, IntRange(0,2));
         IntOption  opt_cnf_level    ("RIP", "rip-cnf", "Effort level for CNF simplification (0-2)", 1, IntRange(0,2));
-        IntOption  opt_pdepth       ("RIP", "rip-pdepth", "Depth of property instance.", 4, IntRange(0,INT32_MAX));
+        IntOption  opt_pdepth       ("RIP", "rip-pdepth", "Depth of property instance.", 0, IntRange(0,INT32_MAX));
         BoolOption opt_use_ind      ("RIP", "rip-use-ind", "Use property in induction hypothesis", true);
         BoolOption opt_use_uniq     ("RIP", "rip-use-uniq", "Use unique state induction", false);
         DoubleOption opt_push_limit ("RIP", "rip-push-lim", "Fraction of total clauses which triggers a new push iteration", 0, DoubleRange(0,true, HUGE_VAL, true));
@@ -88,11 +89,15 @@ namespace Tip {
                                  clause_queue;
             SMap<vec<Clause*> >  bwd_occurs;
             SMap<vec<Clause*> >  fwd_occurs;
+            
+            vec<SharedRef<ScheduledClause> >
+                                 blockedClauses;
 
             // Liveness to safety mapping:
             vec<EventCounter>    event_cnts;
 
             // Solver data: Should be rederivable from only independent data at any time:
+            
             InitInstance         init;
             PropInstance         prop;
             StepInstance         step;
@@ -129,17 +134,18 @@ namespace Tip {
             // PROVE:   let k = c.cycle: F_inv ^ F[k-1] ^ c ^ Trans => c'
             // RETURNS: True and a minimal stronger clause d (subset of c) that holds in a maximal cycle >= k,
             //       or False and a new clause predecessor to be proved in cycle k-1.
-            bool             proveAndGeneralize(SharedRef<ScheduledClause> c, Clause& yes, SharedRef<ScheduledClause>& no);
+            bool             proveAndGeneralize(SharedRef<ScheduledClause> c, Clause& yes, SharedRef<ScheduledClause>& no,
+                                                int uncontr);
 
             // PROVE:   let k = c.cycle: F_inv ^ F[k-1] ^ c ^ Trans => c'
             // RETURNS: True and a stronger clause d (subset of c) that holds in some cycle >= k,
             //       or False if c does not hold in cycle k.
-            bool             proveStep(const Clause& c, Clause& yes);
+            bool             proveStep(const Clause& c, Clause& yes, int uncontr);
 
             void             scheduleGeneralizeOrder(const Clause& c, vec<Sig>& try_remove);
 
             // Find a maximal generalization of c that still is subsumed by init.
-            void             generalize(Clause& c);
+            void             generalize(Clause& c, int uncontr = 2);
 
             // Find a maximal generalization of c that holds in initial states.
             void             generalizeInit(Clause& c);
@@ -148,7 +154,7 @@ namespace Tip {
             // RETURNS: l_True if the property is implied by the invariants alone,
             //       or l_False and a new clause predecessor to be proved in cycle k,
             //       or l_Undef when the propery 'p' holds in cycle k+1.
-            lbool            proveProp(Sig p, SharedRef<ScheduledClause>& no);
+            lbool            proveProp(Sig p, SharedRef<ScheduledClause>& no, int uncontr);
 
             // Prove scheduled clause "recursively". Returns true if the clause was proved, and
             // false if it was falsified.
@@ -161,6 +167,10 @@ namespace Tip {
             // Add a proved clause 'c'. Returns true if this causes an invariant to be found, and false
             // otherwise.
             bool             addClause    (const Clause& c);
+            
+            // 'Blocks' a clause 'sc'. This adds the clause to the proven ones as if it
+            // had been proven
+            void blockClause(SharedRef<ScheduledClause>& pred);
 
             // When some set of invariants have been found, extract and add the clauses to
             // 'F_inv'. Also perform backward subsumption to remove redundant clauses.
@@ -201,11 +211,13 @@ namespace Tip {
 
             // DEBUG:
             void             printClause (const Clause& c);
+            void             printClause (const ScheduledClause& sc);
 
             
         public:
 
             void             printInvariant  ();
+            void             writeInvariant  ();
             void             verifyInvariant ();
 
             Trip(TipCirc& t, unsigned prop_depth, bool start_at_depth_zero)
@@ -320,7 +332,7 @@ namespace Tip {
             sort(try_remove, SigActLt(flop_act));
         }
 
-        void Trip::generalize(Clause& c)
+        void Trip::generalize(Clause& c, int uncontr)
         {
             vec<Sig> try_remove;
             Clause   d = c;
@@ -337,16 +349,18 @@ namespace Tip {
                 if (find(d, elem)){
                     Clause cand = d - elem;
                     cls_generalizations++;
-                    if (step.prove(cand, e) && init.prove(cand, e, d)){
+                    
+                    if (step.prove(cand, e, uncontr) && init.prove(cand, e, d)){
                         reset = index;
                         i     = 0;
-                        if (tip.verbosity >= 4) printf(".%d", d.size());
+                        //if (tip.verbosity >= 4) printf(".%d", d.size());
                         assert(subsumes(d, cand));
-                    }else
-                        if (tip.verbosity >= 4) printf(".");
+                    } else {
+                        //if (tip.verbosity >= 4) printf(".");
+                    }
                 }
             }
-            if (tip.verbosity >= 4) printf("\n");
+            //if (tip.verbosity >= 4) printf("\n");
             
             assert(subsumes(d, c));
             c = d;
@@ -374,58 +388,86 @@ namespace Tip {
         }
 
 
-        bool Trip::proveAndGeneralize(SharedRef<ScheduledClause> c, Clause& yes, SharedRef<ScheduledClause>& no)
+        bool Trip::proveAndGeneralize(SharedRef<ScheduledClause> c, Clause& yes, SharedRef<ScheduledClause>& no,
+                int uncontr)
         {
+            
+            DEB(printf("[proveAndGeneralize] c = "));
+            DEB(printClause(*c));
+
             Clause yes_init, yes_step;
             if (c->cycle == 0){
                 Clause empty;
-                // printf("[proveAndGeneralize] cycle-0:\n");
-                if (!init.prove(*c, empty, yes_init, no, c))
+                DEB(printf("[proveAndGeneralize] cycle-0:\n"));
+                if (!init.prove(*c, empty, yes_init, uncontr, no, c)) {
                     return false;
+                }
+                DEB(printf("[proveAndGeneralize] After init.prove: init_step = "));
+                DEB(printClause(yes_step));
                 generalizeInit(yes_init);
                 yes_step = yes_init;
             }else{
-                if (!step.prove(*c, yes_step, no, c))
+                DEB(printf("first step.prove\n"));
+                if (!step.prove(*c, yes_step, no, c, uncontr))
                     return false;
+                DEB(printf("[proveAndGeneralize] After step.prove: yes_step = "));
+                DEB(printClause(yes_step));
 
                 //check(proveInit(*c, yes_init));
                 check(init.prove(*c, yes_step, yes_init));
+                //DEB(printf("[proveAndGeneralize] After init.prove: yes_step = "));
+                //DEB(printClause(yes_init));
 
                 assert(subsumes(yes_step, yes_init));
                 yes_step = yes_init;
 
-                if (tip.verbosity >= 4) printf("[generalize] %d.%d", c->size(), yes_step.size());
+                //if (tip.verbosity >= 4) printf("[generalize] %d.%d\n", c->size(), yes_step.size());
 
 #ifdef GENERALIZE_THEN_PUSH
-                generalize(yes_step);
+                generalize(yes_step, uncontr);
 #endif
             }
+            
+            
+            
+            DEB(printf("[proveAndGeneralize] After generalisation\n"));
+            DEB(printf("[proveAndGeneralize] yes_step = "));
+            DEB(printClause(yes_step));
 
             // Check if clause is already inductive:
             if (yes_step.cycle != cycle_Undef){
+                DEB(printf("[proveAndGeneralize] Checking for inductive\n"));
                 Clause inf = yes_step;
                 inf.cycle = cycle_Undef;
-                if (step.prove(inf, yes_step)){
-                    check(init.prove(inf, yes_step, yes_init));
+                int uncontrollable=2;
+                if (step.prove(inf, yes_step, uncontrollable)){
+                    check(init.prove(inf, yes_step, yes_init, uncontrollable));
                     assert(subsumes(yes_step, yes_init));
                     yes_step = yes_init;
+                    DEB(printf("[proveAndGeneralize] It was inductive\n"));                    
                 }
             }
 
             // Push clause forwards as much as possible:
-            while (yes_step.cycle < size()){
+            while (yes_step.cycle < size()) {
+                //DEB(printf("Inside the forwarding loop, cycle=%d\n",yes_step.cycle));                
+                //DEB(printf("[proveAndGeneralize] Pushing forwards\n"));
                 Clause d = yes_step;
                 d.cycle++;
-                if (!step.prove(d, yes_step))
+                //DEB(printf("yes_step.cycle=%d; d.cycle=%d\n",yes_step.cycle,d.cycle));                
+                int uncontrollable=2;
+                if (!step.prove(d, yes_step, uncontrollable))
                     break;
-                check(init.prove(d, yes_step, yes_init));
+                check(init.prove(d, yes_step, yes_init, uncontrollable));
                 assert(subsumes(yes_step, yes_init));
                 yes_step = yes_init;
+                //DEB(printf("yes_step.cycle=%d; yes_init.cycle=%d\n",yes_step.cycle,yes_init.cycle));                
             }
+            //DEB(printf("Outside the forwarding loop\n"));
 
 #ifndef GENERALIZE_THEN_PUSH
             if (yes_step.cycle > 0)
-                generalize(yes_step);
+                generalize(yes_step, uncontr);
 #endif
 
             yes = yes_step;
@@ -435,28 +477,30 @@ namespace Tip {
         }
 
 
-        bool Trip::proveStep(const Clause& c, Clause& yes)
+        bool Trip::proveStep(const Clause& c, Clause& yes, int uncontr)
         {
             // FIXME: code duplication ...
             Clause yes_init, yes_step;
 
-            if (!step.prove(c, yes_step))
+            if (!step.prove(c, yes_step, uncontr))
                 return false;
 
             if (tip.verbosity >= 5 && c.cycle < yes_step.cycle)
-                printf("[proveStep] clause was proved in the future: %d -> %d\n",
+                printf("[proveStep] clause was proved in the future: %u -> %d\n",
                        c.cycle, yes_step.cycle);
 
             //check(proveInit(c, yes_init));
-            check(init.prove(c, yes_step, yes_init));
+            check(init.prove(c, yes_step, yes_init, uncontr));
 
             // Calculate union of the two strengthened clauses:
             yes = yes_init + yes_step;
             return true;
         }
 
-
-        lbool Trip::proveProp(Sig p, SharedRef<ScheduledClause>& no){ return prop.prove(p, no, safe_depth+1); }
+        
+        lbool Trip::proveProp(Sig p, SharedRef<ScheduledClause>& no, int uncontr){
+            return prop.prove(p, no, safe_depth+1, uncontr);
+        }
 
 
         bool Trip::baseCase()
@@ -719,11 +763,11 @@ namespace Tip {
 
             DEB(printf("[addClause] c = "));
             DEB(printClause(c));
-            DEB(printf("\n"));
-
+            //DEB(printf("Is null: %d\n", &c_ == NULL));
             assert(!fwdSubsumed(&c_));
             n_total++;
             cls_added++;
+            //DEB(printf("break1\n"));
 
             if (order_heur == 2){
                 // Decay flop activities:
@@ -749,7 +793,7 @@ namespace Tip {
                 bwd_occurs.growTo(c[i]);
                 bwd_occurs[c[i]].push(&c);
             }
-
+            //DEB(printf("break5\n"));
             // Attach to forward subsumption index:
             int min_index = 0;
             int min_size  = fwd_occurs.has(c[0]) ? fwd_occurs[c[0]].size() : 0;
@@ -763,7 +807,7 @@ namespace Tip {
             }
             fwd_occurs.growTo(c[min_index]);
             fwd_occurs[c[min_index]].push(&c);
-
+            //DEB(printf("break6\n"));
             return bwdSubsume(&c);
         }
 
@@ -864,13 +908,11 @@ namespace Tip {
                     cls_bwdsub++;
                     if (removeClause(occ[i])){
                         if (verify){
-                            printf("[bwdSubsume] spurious subsumption\n");
-                            printf("[bwdSubsume] c = ");
+                            DEB(printf("[bwdSubsume] spurious subsumption\n"));
+                            DEB(printf("[bwdSubsume] c = "));
                             printClause(*c);
-                            printf("\n");
-                            printf("[bwdSubsume] d = ");
+                            DEB(printf("[bwdSubsume] d = "));
                             printClause(*occ[i]);
-                            printf("\n");
                             assert(false);
                         }
                         inv_found = true;
@@ -889,10 +931,34 @@ namespace Tip {
                     const Clause& c = *F_inv[i];
                     printf(" >> ");
                     printClause(c);
-                    printf("\n");
                 }
         }
-
+        
+        
+        void Trip::writeInvariant()
+        {
+            
+            FILE * myfile;
+            myfile = fopen ("/data/guangyuh/coding_env/PDR_based_SC/output.txt","w");
+            for (int i = 0; i < F_inv.size(); i++)
+                if (F_inv[i]->isActive()) {
+                    const Clause& c = *F_inv[i];
+                    if (c.cycle == cycle_Undef)
+                        for (unsigned i = 0; i < c.size(); i++) {
+                            if (i > 0) fprintf(myfile,",");
+                            if (sign(c[i])) fprintf(myfile,"~");
+                            if (tip.flps.isFlop(gate(c[i])))
+                                fprintf(myfile,"f");
+                            else if (type(c[i]) == gtype_Inp)
+                                fprintf(myfile,"i");
+                            else
+                                assert(false);
+                            fprintf(myfile,"%u", tip.main.number(gate(c[i])));
+                        }
+                    fprintf(myfile,"\n");
+                }
+            fclose(myfile);
+        }        
 
         void Trip::verifyInvariant()
         {
@@ -950,7 +1016,7 @@ namespace Tip {
             if (num_failed > 0){
                 printf("WARNING! %d clauses are not implied by the candidate invariant.\n", num_failed);
                 exit(211); }
-            //printf("[verifyInvariant] invariant checked (step) cpu-time = %.2f s\n", cpuTime() - time_before);
+            //DEB(printf("[verifyInvariant] invariant checked (step) cpu-time = %.2f s\n", cpuTime() - time_before));
 
             // Verify that properties are implied by the invariant:
             num_failed = 0;
@@ -964,7 +1030,7 @@ namespace Tip {
             if (num_failed > 0){
                 printf("WARNING! %d properties are not implied by the candidate invariant.\n", num_failed);
                 exit(212); }
-            //printf("[verifyInvariant] properties checked cpu-time = %.2f s\n", cpuTime() - time_before);
+            //DEB(printf("[verifyInvariant] properties checked cpu-time = %.2f s\n", cpuTime() - time_before));
 
             // Clausify-connect cycle 0 to the initial circuit:
             for (int i = 0; i < tip.flps.size(); i++)
@@ -983,7 +1049,7 @@ namespace Tip {
                 if (s.solve(cs))
                     num_failed++;
             }
-            // printf("[verifyInvariant] invariant checked (base) cpu-time = %.2f s\n", cpuTime() - time_before);
+            // DEB(printf("[verifyInvariant] invariant checked (base) cpu-time = %.2f s\n", cpuTime() - time_before));
 
             if (num_failed > 0){
                 printf("WARNING! %d clauses not true in cycle 1.\n", num_failed);
@@ -1038,7 +1104,7 @@ namespace Tip {
                         c = *F[k][i];
                         c.cycle++;
 
-                        if (proveStep(c, d)){
+                        if (proveStep(c, d, 2)){
                             // NOTE: the clause F[c][i] will be removed by backward subsumption.
                             if (!c.isActive()){
                                 cls_revived++;
@@ -1080,9 +1146,6 @@ namespace Tip {
                 if (sc == NULL)
                     break;
 
-                DEB(printf("[proveRec] sc = "));
-                DEB(printClause(*sc));
-                DEB(printf("\n"));
 
                 unsigned sub_cycle;
                 if (fwdSubsumed(&(const Clause&)*sc, sub_cycle)){
@@ -1100,48 +1163,66 @@ namespace Tip {
                 Clause minimized;
                 static unsigned iters = 0;
 
-                assert(sc->cycle <= safe_depth+1);
-                if (proveAndGeneralize(sc, minimized, pred)){
-                    if ((iters++ % 10) == 0) printStats(sc->cycle, false);
+                assert(sc->cycle <= safe_depth + 1);
+                for (int uncontr = 0; uncontr <= 1; uncontr++) {
 
-                    cls_total_size    += minimized.size();
-                    cls_total_before  += sc->size();
-                    cls_total_removed += sc->size() - minimized.size();
-                    cnt++;
+                    DEB(printf("[proveRec] sc = "));
+                    DEB(printClause(*sc));
+                    if (proveAndGeneralize(sc, minimized, pred, uncontr)) {
+                        DEB(printf("[proveRec] Proved the clause with uncontr = %d\n", uncontr));
+                        if (uncontr == 1) {
+                            if ((iters++ % 10) == 0) printStats(sc->cycle, false);
 
-                    if (bound > 0){
-                        // Handle restarts:
-                        if (restart_cnt == bound){
-                            // printf("[proveRec] restart (bound = %d)\n", bound);
-                            luby_index++;
-                            restart_cnt = 0;
-                            clause_queue.clear();
-                            return true;
-                        }else
-                            restart_cnt++;
-                    }
-                    
-                    if (addClause(minimized)){
-                        extractInvariant();
-                    }else if (fwd_inst && minimized.cycle != cycle_Undef && minimized.cycle+1 <= safe_depth+1){
-                        sc->cycle = minimized.cycle+1;
-                        enqueueClause(sc);
-                    }
-                }else if (sc->cycle == 0)
-                    return false;
-                else{
-                    if (pred->cycle > 0){
-                        Clause empty; empty.cycle = cycle_Undef;
-                        Clause slask;
-                        assert(init.prove(*pred, empty, slask));
-                    }
+                            cls_total_size += minimized.size();
+                            cls_total_before += sc->size();
+                            cls_total_removed += sc->size() - minimized.size();
+                            cnt++;
 
-                    cands_added++;
-                    cands_total_size    += pred->size();
-                    cands_total_removed += tip.flps.size() - pred->size();
-                    
-                    enqueueClause(pred);
-                    enqueueClause(sc);
+                            if (bound > 0) {
+                                // Handle restarts:
+                                if (restart_cnt == bound) {
+                                    // printf("[proveRec] restart (bound = %d)\n", bound);
+                                    luby_index++;
+                                    restart_cnt = 0;
+                                    clause_queue.clear();
+                                    return true;
+                                } else
+                                    restart_cnt++;
+                            }
+
+                            if (addClause(minimized)) {
+                                DEB(printf("[proveRec] extractInvariant:\n"));
+                                extractInvariant();
+                            } else if (fwd_inst && minimized.cycle != cycle_Undef && minimized.cycle + 1 <= safe_depth + 1) {
+                                sc->cycle = minimized.cycle + 1;
+                                enqueueClause(sc);
+                            }
+                        }
+                    } else if (sc->cycle == 0)
+                        return false;
+                    else {
+
+                        if (pred->cycle > 0) {
+                            Clause empty;
+                            empty.cycle = cycle_Undef;
+                            Clause slask;
+                            assert(init.prove(*pred, empty, slask, uncontr));
+                        }
+
+                        if (uncontr == 0) {
+                            DEB(printf("[proveRec] Blocking pred. clause:\n"));
+                            DEB(printClause(*pred));
+                            blockClause(pred);
+                            enqueueClause(sc);
+                        } else {
+                            DEB(printf("[proveRec] Enqeueing pred. clause:\n"));
+                            DEB(printClause(*pred));
+                            cands_added++;
+                            cands_total_size += pred->size();
+                            cands_total_removed += tip.flps.size() - pred->size();
+                            enqueueClause(pred);
+                        }
+                    }
                 }
             }
 
@@ -1152,6 +1233,12 @@ namespace Tip {
             return true;
         }
 
+        void Trip::blockClause(SharedRef<ScheduledClause>& sc){
+            (*sc).cycle = cycle_Undef;
+            DEB(printf("[blockClause]\n"));
+            addClause(*sc);
+            blockedClauses.push(sc);
+        }
 
         bool Trip::decideCycle()
         {
@@ -1161,12 +1248,30 @@ namespace Tip {
             int                        unresolved = 0;
 
             // Process safety properties:
-            for (SafeProp p = 0; p < tip.safe_props.size(); p++)
+            // Ignore first safety prop; it's the uncontrollability sig
+            Sig uncSig = tip.safe_props[0].sig;
+            //tip.setUncSig(uncSig);
+            tip.setUncSig(uncSig);
+            //tip.printCirc();
+            
+            for (SafeProp p = 1; p < tip.safe_props.size(); p++)
                 if (tip.safe_props[p].stat == pstat_Unknown){
                     lbool prop_res = l_False;
                     do {
                         // printf("[decideCycle] checking safety property %d in cycle %d\n", p, safe_depth+1);
-                        prop_res = proveProp(tip.safe_props[p].sig, pred);
+                        int uncontr = 0;
+                        prop_res = proveProp(tip.safe_props[p].sig, pred, uncontr);
+                        if (prop_res == l_False) {
+                            //TODO: generalize these clauses somehow.
+                            //generalize((Clause&)*pred, uncontr); //doesn't work, generalize() uses step.prove
+                            blockClause(pred);
+                        }
+                    } while (prop_res == l_False);
+                    prop_res = l_False;
+                    do {
+                        // printf("[decideCycle] checking safety property %d in cycle %d\n", p, safe_depth+1);
+                        int uncontr = 1;
+                        prop_res = proveProp(tip.safe_props[p].sig, pred, uncontr);
                         if (prop_res == l_False){
                             cands_added++;
                             cands_total_size    += pred->size();
@@ -1193,13 +1298,14 @@ namespace Tip {
 
             // Process liveness properties:
             //event_cnts.growTo(tip.live_props.size());
-            for (LiveProp p = 0; p < tip.live_props.size(); p++)
+            /*for (LiveProp p = 0; p < tip.live_props.size(); p++)
                 if (tip.live_props[p].stat == pstat_Unknown){
 
                     lbool prop_res = l_False;
                     do {
+                        int uncontr=1; // We don't care about liveness for now
                         // printf("[decideCycle] checking liveness property %d in cycle %d\n", p, size());
-                        prop_res = proveProp(~event_cnts[p].q, pred);
+                        prop_res = proveProp(~event_cnts[p].q, pred, uncontr);
 
                         if (prop_res == l_False){
                             cands_added++;
@@ -1207,7 +1313,7 @@ namespace Tip {
                             cands_total_removed += tip.flps.size() - pred->size();
                             if (!proveRec(pred, start)){
                                 // 'p' was falsified.
-                                printf("[decideCycle] event counter for liveness property %d reached %d\n", p, event_cnts[p].k);
+                                DEB("[decideCycle] event counter for liveness property %d reached %d\n", p, event_cnts[p].k));
 
                                 // vec<vec<lbool> > frames;
                                 // extractTrace(start, frames);
@@ -1227,6 +1333,7 @@ namespace Tip {
                         }
                     }while (prop_res == l_False);
                 }
+             */
 
             bool result;
             // Check if all properties were resolved:
@@ -1239,6 +1346,7 @@ namespace Tip {
                 // At this point we know that all remaining properties are implied in cycle k+1. Expand
                 // a new frame and push clauses forward as much as possible:
                 safe_depth++;
+                DEB(printf("[decideCycle] entering pushClauses\n"));
                 pushClauses();
                 prop.clearClauses(safe_depth+1);
                 result = false;
@@ -1333,6 +1441,13 @@ namespace Tip {
                    init.props(), step.props(), prop.props());
             printf("  CPU-Time:        %12.1f s %12.1f s %12.1f s\n",
                    init.time(), step.time(), prop.time());
+            
+            printf("\n");
+            printf("\n");
+            DEB(printf("Blocked Clauses:\n"));
+            for (int i = 0; i < blockedClauses.size(); i++) {
+                DEB(printClause(*blockedClauses[i]));
+            }
         }
 
 
@@ -1340,6 +1455,12 @@ namespace Tip {
         {
             Tip::printClause(tip, c);
         }
+        
+        void Trip::printClause(const ScheduledClause& sc)
+        {
+            Tip::printClause(tip, sc);
+        }       
+        
     };
 
 
@@ -1356,7 +1477,7 @@ namespace Tip {
         //     bmc->decideCycle();
         //     bmc->printStats ();
         // }
-
+        /*
         for (int i = 0; !bmc->done() && i < opt_pdepth; i++){
             bmc->unrollCycle();
             bmc->decideCycle();
@@ -1380,6 +1501,7 @@ namespace Tip {
                 bmc->decideCycle();
                 bmc->printStats ();
             }
+        */
 
         // TODO: implement a clear/reset method in bmc-class instead.
         double bmc_time = 0;
@@ -1390,6 +1512,8 @@ namespace Tip {
         }
 
         while (!trip.decideCycle()){
+            DEB(printf("[relativeInduction] decided one cycle\n"));
+
             trip.printStats();
 
             // TODO: work on better heuristics here.
@@ -1420,6 +1544,7 @@ namespace Tip {
 
         double total_time = cpuTime() - time_before;
         trip.printFinalStats();
+        trip.writeInvariant();
         printf("\n");
         printf("CPU-time:\n");
         printf("  Rip:   %.2f s\n", trip.time());

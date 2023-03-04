@@ -25,7 +25,7 @@ nbrPhils = 5
 
 -- possible values of nbrSteps: 10, 50, 100, 200, 500, 1000
 nbrSteps :: Int
-nbrSteps = 1000
+nbrSteps = 100
 
 fileNameI :: Int -> Int -> FilePath
 fileNameI i j = "Examples/HVC2017/EDP" ++ (show i) ++ "_"++ (show j) ++ ".wmod"

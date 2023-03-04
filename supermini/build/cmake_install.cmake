@@ -1,4 +1,4 @@
-# Install script for directory: /data/guangyuh/coding_env/supermini
+# Install script for directory: /data/guangyuh/coding_env/PDR_based_SC/supermini
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/data/guangyuh/coding_env/supermini/build/minisat/cmake_install.cmake")
-  include("/data/guangyuh/coding_env/supermini/build/minisatp/cmake_install.cmake")
-  include("/data/guangyuh/coding_env/supermini/build/mcl/cmake_install.cmake")
-  include("/data/guangyuh/coding_env/supermini/build/tip/cmake_install.cmake")
+  include("/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat/cmake_install.cmake")
+  include("/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisatp/cmake_install.cmake")
+  include("/data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl/cmake_install.cmake")
+  include("/data/guangyuh/coding_env/PDR_based_SC/supermini/build/tip/cmake_install.cmake")
 
 endif()
 
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/data/guangyuh/coding_env/supermini/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

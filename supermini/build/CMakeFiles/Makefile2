@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/supermini
+CMAKE_SOURCE_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/guangyuh/coding_env/supermini/build
+CMAKE_BINARY_DIR = /data/guangyuh/coding_env/PDR_based_SC/supermini/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -171,14 +171,14 @@ tip/clean: tip/CMakeFiles/tip-lib-static.dir/clean
 minisat/CMakeFiles/minisat_simp.dir/all: minisat/CMakeFiles/minisat-lib-static.dir/all
 	$(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/depend
 	$(MAKE) -f minisat/CMakeFiles/minisat_simp.dir/build.make minisat/CMakeFiles/minisat_simp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=36,37 "Built target minisat_simp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=36,37 "Built target minisat_simp"
 .PHONY : minisat/CMakeFiles/minisat_simp.dir/all
 
 # Build rule for subdir invocation for target.
 minisat/CMakeFiles/minisat_simp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat_simp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : minisat/CMakeFiles/minisat_simp.dir/rule
 
 # Convenience name for target.
@@ -198,14 +198,14 @@ minisat/CMakeFiles/minisat_simp.dir/clean:
 minisat/CMakeFiles/minisat_core.dir/all: minisat/CMakeFiles/minisat-lib-static.dir/all
 	$(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/depend
 	$(MAKE) -f minisat/CMakeFiles/minisat_core.dir/build.make minisat/CMakeFiles/minisat_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=34,35 "Built target minisat_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=34,35 "Built target minisat_core"
 .PHONY : minisat/CMakeFiles/minisat_core.dir/all
 
 # Build rule for subdir invocation for target.
 minisat/CMakeFiles/minisat_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat_core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : minisat/CMakeFiles/minisat_core.dir/rule
 
 # Convenience name for target.
@@ -225,14 +225,14 @@ minisat/CMakeFiles/minisat_core.dir/clean:
 minisat/CMakeFiles/minisat-lib-shared.dir/all:
 	$(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/depend
 	$(MAKE) -f minisat/CMakeFiles/minisat-lib-shared.dir/build.make minisat/CMakeFiles/minisat-lib-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=25,26,27,28,29 "Built target minisat-lib-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=25,26,27,28,29 "Built target minisat-lib-shared"
 .PHONY : minisat/CMakeFiles/minisat-lib-shared.dir/all
 
 # Build rule for subdir invocation for target.
 minisat/CMakeFiles/minisat-lib-shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat-lib-shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : minisat/CMakeFiles/minisat-lib-shared.dir/rule
 
 # Convenience name for target.
@@ -252,14 +252,14 @@ minisat/CMakeFiles/minisat-lib-shared.dir/clean:
 minisat/CMakeFiles/minisat-lib-static.dir/all:
 	$(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/depend
 	$(MAKE) -f minisat/CMakeFiles/minisat-lib-static.dir/build.make minisat/CMakeFiles/minisat-lib-static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=30,31,32,33 "Built target minisat-lib-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=30,31,32,33 "Built target minisat-lib-static"
 .PHONY : minisat/CMakeFiles/minisat-lib-static.dir/all
 
 # Build rule for subdir invocation for target.
 minisat/CMakeFiles/minisat-lib-static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 minisat/CMakeFiles/minisat-lib-static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : minisat/CMakeFiles/minisat-lib-static.dir/rule
 
 # Convenience name for target.
@@ -280,14 +280,14 @@ minisatp/CMakeFiles/minisatp.dir/all: minisat/CMakeFiles/minisat-lib-static.dir/
 minisatp/CMakeFiles/minisatp.dir/all: minisatp/CMakeFiles/minisatp-lib-static.dir/all
 	$(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/depend
 	$(MAKE) -f minisatp/CMakeFiles/minisatp.dir/build.make minisatp/CMakeFiles/minisatp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=38,39 "Built target minisatp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=38,39 "Built target minisatp"
 .PHONY : minisatp/CMakeFiles/minisatp.dir/all
 
 # Build rule for subdir invocation for target.
 minisatp/CMakeFiles/minisatp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : minisatp/CMakeFiles/minisatp.dir/rule
 
 # Convenience name for target.
@@ -307,14 +307,14 @@ minisatp/CMakeFiles/minisatp.dir/clean:
 minisatp/CMakeFiles/minisatp-lib-shared.dir/all: minisat/CMakeFiles/minisat-lib-shared.dir/all
 	$(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/depend
 	$(MAKE) -f minisatp/CMakeFiles/minisatp-lib-shared.dir/build.make minisatp/CMakeFiles/minisatp-lib-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target minisatp-lib-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target minisatp-lib-shared"
 .PHONY : minisatp/CMakeFiles/minisatp-lib-shared.dir/all
 
 # Build rule for subdir invocation for target.
 minisatp/CMakeFiles/minisatp-lib-shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp-lib-shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : minisatp/CMakeFiles/minisatp-lib-shared.dir/rule
 
 # Convenience name for target.
@@ -334,14 +334,14 @@ minisatp/CMakeFiles/minisatp-lib-shared.dir/clean:
 minisatp/CMakeFiles/minisatp-lib-static.dir/all: minisat/CMakeFiles/minisat-lib-static.dir/all
 	$(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/depend
 	$(MAKE) -f minisatp/CMakeFiles/minisatp-lib-static.dir/build.make minisatp/CMakeFiles/minisatp-lib-static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target minisatp-lib-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target minisatp-lib-static"
 .PHONY : minisatp/CMakeFiles/minisatp-lib-static.dir/all
 
 # Build rule for subdir invocation for target.
 minisatp/CMakeFiles/minisatp-lib-static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 minisatp/CMakeFiles/minisatp-lib-static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : minisatp/CMakeFiles/minisatp-lib-static.dir/rule
 
 # Convenience name for target.
@@ -361,14 +361,14 @@ minisatp/CMakeFiles/minisatp-lib-static.dir/clean:
 mcl/CMakeFiles/mcl-lib-shared.dir/all: minisat/CMakeFiles/minisat-lib-shared.dir/all
 	$(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/depend
 	$(MAKE) -f mcl/CMakeFiles/mcl-lib-shared.dir/build.make mcl/CMakeFiles/mcl-lib-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target mcl-lib-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target mcl-lib-shared"
 .PHONY : mcl/CMakeFiles/mcl-lib-shared.dir/all
 
 # Build rule for subdir invocation for target.
 mcl/CMakeFiles/mcl-lib-shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 mcl/CMakeFiles/mcl-lib-shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : mcl/CMakeFiles/mcl-lib-shared.dir/rule
 
 # Convenience name for target.
@@ -388,14 +388,14 @@ mcl/CMakeFiles/mcl-lib-shared.dir/clean:
 mcl/CMakeFiles/mcl-lib-static.dir/all: minisat/CMakeFiles/minisat-lib-static.dir/all
 	$(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/depend
 	$(MAKE) -f mcl/CMakeFiles/mcl-lib-static.dir/build.make mcl/CMakeFiles/mcl-lib-static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24 "Built target mcl-lib-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24 "Built target mcl-lib-static"
 .PHONY : mcl/CMakeFiles/mcl-lib-static.dir/all
 
 # Build rule for subdir invocation for target.
 mcl/CMakeFiles/mcl-lib-static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 mcl/CMakeFiles/mcl-lib-static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : mcl/CMakeFiles/mcl-lib-static.dir/rule
 
 # Convenience name for target.
@@ -417,14 +417,14 @@ tip/CMakeFiles/tip.dir/all: mcl/CMakeFiles/mcl-lib-static.dir/all
 tip/CMakeFiles/tip.dir/all: tip/CMakeFiles/tip-lib-static.dir/all
 	$(MAKE) -f tip/CMakeFiles/tip.dir/build.make tip/CMakeFiles/tip.dir/depend
 	$(MAKE) -f tip/CMakeFiles/tip.dir/build.make tip/CMakeFiles/tip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=68,69 "Built target tip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=68,69 "Built target tip"
 .PHONY : tip/CMakeFiles/tip.dir/all
 
 # Build rule for subdir invocation for target.
 tip/CMakeFiles/tip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 34
 	$(MAKE) -f CMakeFiles/Makefile2 tip/CMakeFiles/tip.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : tip/CMakeFiles/tip.dir/rule
 
 # Convenience name for target.
@@ -445,14 +445,14 @@ tip/CMakeFiles/tip-lib-shared.dir/all: minisat/CMakeFiles/minisat-lib-shared.dir
 tip/CMakeFiles/tip-lib-shared.dir/all: mcl/CMakeFiles/mcl-lib-shared.dir/all
 	$(MAKE) -f tip/CMakeFiles/tip-lib-shared.dir/build.make tip/CMakeFiles/tip-lib-shared.dir/depend
 	$(MAKE) -f tip/CMakeFiles/tip-lib-shared.dir/build.make tip/CMakeFiles/tip-lib-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78,79,80,81,82,83,84 "Built target tip-lib-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78,79,80,81,82,83,84 "Built target tip-lib-shared"
 .PHONY : tip/CMakeFiles/tip-lib-shared.dir/all
 
 # Build rule for subdir invocation for target.
 tip/CMakeFiles/tip-lib-shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 tip/CMakeFiles/tip-lib-shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : tip/CMakeFiles/tip-lib-shared.dir/rule
 
 # Convenience name for target.
@@ -473,14 +473,14 @@ tip/CMakeFiles/tip-lib-static.dir/all: minisat/CMakeFiles/minisat-lib-static.dir
 tip/CMakeFiles/tip-lib-static.dir/all: mcl/CMakeFiles/mcl-lib-static.dir/all
 	$(MAKE) -f tip/CMakeFiles/tip-lib-static.dir/build.make tip/CMakeFiles/tip-lib-static.dir/depend
 	$(MAKE) -f tip/CMakeFiles/tip-lib-static.dir/build.make tip/CMakeFiles/tip-lib-static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/supermini/build/CMakeFiles --progress-num=85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target tip-lib-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles --progress-num=85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target tip-lib-static"
 .PHONY : tip/CMakeFiles/tip-lib-static.dir/all
 
 # Build rule for subdir invocation for target.
 tip/CMakeFiles/tip-lib-static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 tip/CMakeFiles/tip-lib-static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/supermini/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/guangyuh/coding_env/PDR_based_SC/supermini/build/CMakeFiles 0
 .PHONY : tip/CMakeFiles/tip-lib-static.dir/rule
 
 # Convenience name for target.

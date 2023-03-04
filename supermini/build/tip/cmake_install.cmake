@@ -1,4 +1,4 @@
-# Install script for directory: /data/guangyuh/coding_env/supermini/tip
+# Install script for directory: /data/guangyuh/coding_env/PDR_based_SC/supermini/tip
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/data/guangyuh/coding_env/supermini/build/tip/libtip.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/tip/libtip.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -54,8 +54,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/data/guangyuh/coding_env/supermini/build/tip/libtip.so.1.0.0"
-    "/data/guangyuh/coding_env/supermini/build/tip/libtip.so.1"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/tip/libtip.so.1.0.0"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/tip/libtip.so.1"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtip.so.1.0.0"
@@ -65,7 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/data/guangyuh/coding_env/supermini/build/mcl:/data/guangyuh/coding_env/supermini/build/minisat:"
+           OLD_RPATH "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl:/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat:"
            NEW_RPATH "")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/bin/strip" "${file}")
@@ -81,12 +81,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtip.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/data/guangyuh/coding_env/supermini/build/tip/libtip.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/tip/libtip.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtip.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtip.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtip.so"
-         OLD_RPATH "/data/guangyuh/coding_env/supermini/build/mcl:/data/guangyuh/coding_env/supermini/build/minisat:"
+         OLD_RPATH "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/mcl:/data/guangyuh/coding_env/PDR_based_SC/supermini/build/minisat:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtip.so")
@@ -101,7 +101,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/tip"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/data/guangyuh/coding_env/supermini/build/tip/tip")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/data/guangyuh/coding_env/PDR_based_SC/supermini/build/tip/tip")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/tip" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/tip")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -112,8 +112,8 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tip" TYPE DIRECTORY FILES
-    "/data/guangyuh/coding_env/supermini/tip/tip"
-    "/data/guangyuh/coding_env/supermini/tip/tip/bmc"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/tip/tip"
+    "/data/guangyuh/coding_env/PDR_based_SC/supermini/tip/tip/bmc"
     FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

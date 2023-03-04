@@ -276,7 +276,7 @@ void Minisat::printSigs(const vec<Sig>& xs)
         printf(", ");
         printSig(xs[i]);
     }
-    printf(" }");
+    printf(" }\n");
 }
 
 
