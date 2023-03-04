@@ -8,7 +8,8 @@ import Test.QuickCheck.All
 import qualified Test.QuickCheck.Monadic as Q
 import Data.Char
 import Control.Exception
-import System
+import System.Process (system)
+import System.Exit (ExitCode(ExitSuccess))
 
 --------------------------------------------------------------------------------
 
@@ -148,6 +149,19 @@ mkProp_TipWith complete args circ =
 checkAll = $(quickCheckAll)
 
 --------------------------------------------------------------------------------
+--data ExitCode = ExitSuccess | ExitFailure Int
+{-
+instance Eq ExitCode where
+    ExitSuccess == ExitSuccess = True
+    (ExitFailure n) == (ExitFailure m) = n == m
+    _ == _ = False
+
+instance Show ExitCode where
+    show ExitSuccess = "ExitSuccess"
+    show (ExitFailure n) = "ExitFailure " ++ show n
+  -}
+
+
 
 data TipResult
   = TipResult
@@ -156,6 +170,7 @@ data TipResult
   , lives :: [(Int,Bool)]
   }
  deriving ( Eq, Show )
+ 
 
 tip :: Circuit -> [String] -> IO TipResult
 tip circ args =
