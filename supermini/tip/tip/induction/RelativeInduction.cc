@@ -19,11 +19,15 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include "minisat/mtl/Alg.h"
 #include "minisat/mtl/Sort.h"
 #include "minisat/utils/System.h"
+#include "minisat/core/SolverTypes.h"
 #include "tip/induction/Induction.h"
 #include "tip/induction/TripTypes.h"
 #include "tip/induction/TripProofInstances.h"
 #include "tip/liveness/EmbedFairness.h"
 #include "tip/unroll/Bmc.h"
+#include <algorithm>
+#include <vector>
+#include <random>
 #include <stdio.h>
 
 #define GENERALIZE_THEN_PUSH
@@ -143,6 +147,8 @@ namespace Tip {
             bool             proveStep(const Clause& c, Clause& yes, int uncontr);
 
             void             scheduleGeneralizeOrder(const Clause& c, vec<Sig>& try_remove);
+
+            void             RandomGeneralizeOrder(const Clause& c, vec<Sig>& try_remove);
 
             // Find a maximal generalization of c that still is subsumed by init.
             void             generalize(Clause& c, int uncontr = 2);
@@ -332,12 +338,29 @@ namespace Tip {
             sort(try_remove, SigActLt(flop_act));
         }
 
+
+        void Trip::RandomGeneralizeOrder(const Clause& c, vec<Sig>& try_remove)
+        {
+            for (unsigned i = 0; i < c.size(); i++)
+                try_remove.push(c[i]);
+
+            // Shuffle the elements in try_remove using a random device
+            std::random_device rd;
+            std::mt19937 g(rd());
+            //std::shuffle(try_remove.begin(), try_remove.end(), g);
+            for (int i = try_remove.size() - 1; i > 0; i--) {
+                int j = std::uniform_int_distribution<>(0, i)(g);
+                std::swap(try_remove[i], try_remove[j]);
+            }
+        }
+
         void Trip::generalize(Clause& c, int uncontr)
         {
             vec<Sig> try_remove;
             Clause   d = c;
             Clause   e;
             scheduleGeneralizeOrder(c, try_remove);
+            //RandomGeneralizeOrder(c, try_remove);
 
             int reset = 0;
             for (int i = 0; d.size() > 1 && i < try_remove.size(); i++){
@@ -376,6 +399,7 @@ namespace Tip {
             Clause   d = c;
             Clause   empty;
             scheduleGeneralizeOrder(c, try_remove);
+            //RandomGeneralizeOrder(c, try_remove);
 
             for (int i = 0; d.size() > 1 && i < try_remove.size(); i++)
                 if (find(d, try_remove[i])){

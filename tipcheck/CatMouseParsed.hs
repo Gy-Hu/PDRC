@@ -24,10 +24,10 @@ import qualified Data.Set as S
 -- nbrCats should be able to take any value > 0
 
 nbrFloors :: Int
-nbrFloors = 1
+nbrFloors = 7
 
 nbrCats :: Int
-nbrCats = 5
+nbrCats = 7
 
 fileNameI :: Int -> FilePath
 fileNameI i = "Examples/HVC2017/CMT" ++ (show i) ++ "_"++ (show i) ++ ".wmod"
